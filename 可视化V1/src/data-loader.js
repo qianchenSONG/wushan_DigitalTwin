@@ -20,14 +20,17 @@ export function layerVarName(layerId, type) {
 }
 
 export async function loadTopicLayer(layer) {
-  const pointVar = layerVarName(layer.id, "points");
-  const lineVar = layerVarName(layer.id, "lines");
+  const pointLayerId = layer.pointsDataId || layer.id;
+  const lineLayerId = layer.linesDataId || layer.id;
+  const pointVar = layerVarName(pointLayerId, "points");
+  const lineVar = layerVarName(lineLayerId, "lines");
+  const empty = { type: "FeatureCollection", features: [] };
   await Promise.all([
-    window[pointVar] ? Promise.resolve() : loadScript(`./data/layers/${layer.id}.points.js`),
-    window[lineVar] ? Promise.resolve() : loadScript(`./data/layers/${layer.id}.lines.js`)
+    layer.hasPoints === false || window[pointVar] ? Promise.resolve() : loadScript(`./data/layers/${pointLayerId}.points.js`),
+    layer.hasLines === false || window[lineVar] ? Promise.resolve() : loadScript(`./data/layers/${lineLayerId}.lines.js`)
   ]);
   return {
-    points: window[pointVar],
-    lines: window[lineVar]
+    points: layer.hasPoints === false ? empty : window[pointVar],
+    lines: layer.hasLines === false ? empty : window[lineVar]
   };
 }

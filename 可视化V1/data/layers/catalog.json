@@ -1,93 +1,10 @@
 [
   {
-    "id": "flood-drainage-geojson",
-    "title": "防洪排涝通道",
-    "file": "防洪排涝通道.geojson",
-    "kind": "flood-drainage",
-    "color": "#48e17f",
-    "enabled": true,
-    "description": "奥维导出的标准 GeoJSON，包含线状通道和点状标注。",
-    "fileSizeMb": 1.25,
-    "recordCount": 1928,
-    "pointCount": 1273,
-    "lineCount": 1208,
-    "lengthKm": 61.43,
-    "bounds": [
-      [
-        31.06617769,
-        109.85896961
-      ],
-      [
-        31.09754563,
-        109.89475781
-      ]
-    ],
-    "topNames": [
-      [
-        "0_5",
-        85
-      ],
-      [
-        "晴天无流水",
-        65
-      ],
-      [
-        "0_19",
-        57
-      ],
-      [
-        "有污水流入",
-        33
-      ],
-      [
-        "检查井，晴天无流水",
-        26
-      ],
-      [
-        "塑料 DN100",
-        17
-      ],
-      [
-        "砼 DN400",
-        13
-      ],
-      [
-        "渗漏",
-        12
-      ],
-      [
-        "0_32",
-        11
-      ],
-      [
-        "0_755",
-        10
-      ],
-      [
-        "0_756",
-        10
-      ],
-      [
-        "0_757",
-        10
-      ]
-    ],
-    "pointsUrl": "data/layers/flood-drainage-geojson.points.geojson",
-    "linesUrl": "data/layers/flood-drainage-geojson.lines.geojson"
-  },
-  {
-    "id": "drainage-defects-geojson",
-    "title": "巫山排水缺陷分布",
     "file": "巫山缺陷分布图.geojson",
-    "kind": "drainage-defect",
+    "kind": "drainage-defect-line",
     "color": "#ff6b6b",
-    "enabled": true,
-    "description": "奥维导出的标准 GeoJSON，包含排水管线、缺陷点和标注对象。",
     "fileSizeMb": 107.2,
     "recordCount": 60674,
-    "pointCount": 42013,
-    "lineCount": 107607,
-    "lengthKm": 648.96,
     "bounds": [
       [
         31.06138348,
@@ -95,6 +12,99 @@
       ],
       [
         31.1031865,
+        109.89401252
+      ]
+    ],
+    "topNames": [
+      [
+        "0_11847",
+        3229
+      ],
+      [
+        "0_11803",
+        3149
+      ],
+      [
+        "0_11848",
+        2590
+      ],
+      [
+        "0_5757",
+        1863
+      ],
+      [
+        "0_5759",
+        1694
+      ],
+      [
+        "0_11808",
+        1139
+      ],
+      [
+        "0_5765",
+        996
+      ],
+      [
+        "0_11807",
+        690
+      ],
+      [
+        "0_11811",
+        595
+      ],
+      [
+        "污水 砼 Φ400",
+        554
+      ],
+      [
+        "0_5770",
+        420
+      ],
+      [
+        "雨水 砼 Φ300",
+        310
+      ]
+    ],
+    "pointsUrl": "data/layers/drainage-defects-geojson.points.geojson",
+    "linesUrl": "data/layers/drainage-defects-geojson.lines.geojson",
+    "id": "drainage-defects-geojson-lines",
+    "title": "排水管线图",
+    "enabled": false,
+    "description": "排水管线线对象，已隐藏一级/二级/三级/四级结构性与功能性缺陷线。",
+    "pointsDataId": "drainage-defects-geojson",
+    "linesDataId": "drainage-defects-geojson",
+    "hasPoints": false,
+    "hasLines": true,
+    "pointCount": 0,
+    "lineCount": 82615,
+    "lengthKm": 239.09,
+    "filteredRules": [
+      "隐藏线对象：一级/二级/三级/四级结构性缺陷、功能性缺陷"
+    ],
+    "filteredCounts": {
+      "一级功能性缺陷": 3944,
+      "一级结构性缺陷": 13813,
+      "三级功能性缺陷": 146,
+      "三级结构性缺陷": 844,
+      "二级功能性缺陷": 573,
+      "二级结构性缺陷": 5346,
+      "四级功能性缺陷": 105,
+      "四级结构性缺陷": 221
+    }
+  },
+  {
+    "file": "巫山缺陷分布图.geojson",
+    "kind": "drainage-defect-point",
+    "color": "#ff9f43",
+    "fileSizeMb": 107.2,
+    "recordCount": 60674,
+    "bounds": [
+      [
+        31.06138992,
+        109.85164644
+      ],
+      [
+        31.10316707,
         109.89401461
       ]
     ],
@@ -149,6 +159,17 @@
       ]
     ],
     "pointsUrl": "data/layers/drainage-defects-geojson.points.geojson",
-    "linesUrl": "data/layers/drainage-defects-geojson.lines.geojson"
+    "linesUrl": "data/layers/drainage-defects-geojson.lines.geojson",
+    "id": "drainage-defects-geojson-points",
+    "title": "排水管线缺陷分布",
+    "enabled": false,
+    "description": "排水管线缺陷点对象，和排水管线图拆分为独立开关。",
+    "pointsDataId": "drainage-defects-geojson",
+    "linesDataId": "drainage-defects-geojson",
+    "hasPoints": true,
+    "hasLines": false,
+    "pointCount": 42013,
+    "lineCount": 0,
+    "lengthKm": 0
   }
 ]

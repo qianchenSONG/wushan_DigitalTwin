@@ -57,6 +57,8 @@ function listen(port) {
     console.log(`巫山数字孪生系统已启动：${url}`);
     if (process.platform === "win32") {
       childProcess.exec(`start "" "${url}"`);
+    } else if (process.platform === "darwin") {
+      childProcess.exec(`open "${url}"`);
     }
   });
 }
