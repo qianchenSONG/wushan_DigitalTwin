@@ -1,0 +1,105 @@
+{
+ "note": "以下均为汇报演示示意数据，正式成果以实测、普查、CCTV/QV检测及甲方确认数据为准",
+ "regionArea": 6.0,
+ "regionCount": 14,
+ "totalPipeLength": 84.7,
+ "totalCulvertLength": 15.9,
+ "totalDefects": 86,
+ "majorDefects": 21,
+ "affectedSlopes": 22,
+ "priorityRegions": 6,
+ "priorityRegionNames": [
+  "集仙",
+  "净坛",
+  "上升",
+  "松峦",
+  "宁江",
+  "西坪村"
+ ],
+ "regionRanking": [
+  {
+   "name": "集仙",
+   "riskScore": 89,
+   "riskLevel": "重大风险",
+   "priority": "近期"
+  },
+  {
+   "name": "松峦",
+   "riskScore": 89,
+   "riskLevel": "重大风险",
+   "priority": "近期"
+  },
+  {
+   "name": "上升",
+   "riskScore": 77,
+   "riskLevel": "高风险",
+   "priority": "近期"
+  },
+  {
+   "name": "净坛",
+   "riskScore": 73,
+   "riskLevel": "高风险",
+   "priority": "近期"
+  },
+  {
+   "name": "宁江",
+   "riskScore": 63,
+   "riskLevel": "高风险",
+   "priority": "近期"
+  },
+  {
+   "name": "西坪村",
+   "riskScore": 63,
+   "riskLevel": "高风险",
+   "priority": "近期"
+  },
+  {
+   "name": "起云",
+   "riskScore": 60,
+   "riskLevel": "中风险",
+   "priority": "中期"
+  },
+  {
+   "name": "登龙",
+   "riskScore": 56,
+   "riskLevel": "中风险",
+   "priority": "中期"
+  },
+  {
+   "name": "聚鹤",
+   "riskScore": 54,
+   "riskLevel": "中风险",
+   "priority": "中期"
+  },
+  {
+   "name": "朝云",
+   "riskScore": 49,
+   "riskLevel": "中风险",
+   "priority": "中期"
+  },
+  {
+   "name": "圣泉",
+   "riskScore": 45,
+   "riskLevel": "一般风险",
+   "priority": "远期"
+  },
+  {
+   "name": "翠屏",
+   "riskScore": 34,
+   "riskLevel": "一般风险",
+   "priority": "远期"
+  },
+  {
+   "name": "飞凤",
+   "riskScore": 34,
+   "riskLevel": "一般风险",
+   "priority": "远期"
+  },
+  {
+   "name": "神女",
+   "riskScore": 30,
+   "riskLevel": "一般风险",
+   "priority": "远期"
+  }
+ ]
+}

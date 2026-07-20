@@ -1,0 +1,347 @@
+{
+ "relations": [
+  {
+   "id": "REL0001",
+   "sourceType": "defect",
+   "sourceId": "D0001",
+   "targetType": "building",
+   "targetId": "B001",
+   "relationType": "房屋基础影响",
+   "confidence": 0.77,
+   "description": "树根侵入长期渗漏可能影响周边房屋地基不均匀沉降。"
+  },
+  {
+   "id": "REL0002",
+   "sourceType": "defect",
+   "sourceId": "D0003",
+   "targetType": "building",
+   "targetId": "B001",
+   "relationType": "房屋基础影响",
+   "confidence": 0.67,
+   "description": "淤积长期渗漏可能影响周边房屋地基不均匀沉降。"
+  },
+  {
+   "id": "REL0003",
+   "sourceType": "defect",
+   "sourceId": "D0008",
+   "targetType": "building",
+   "targetId": "B002",
+   "relationType": "房屋基础影响",
+   "confidence": 0.59,
+   "description": "破裂长期渗漏可能影响周边房屋地基不均匀沉降。"
+  },
+  {
+   "id": "REL0004",
+   "sourceType": "defect",
+   "sourceId": "D0009",
+   "targetType": "building",
+   "targetId": "B002",
+   "relationType": "房屋基础影响",
+   "confidence": 0.72,
+   "description": "混错接长期渗漏可能影响周边房屋地基不均匀沉降。"
+  },
+  {
+   "id": "REL0005",
+   "sourceType": "defect",
+   "sourceId": "D0011",
+   "targetType": "building",
+   "targetId": "B002",
+   "relationType": "房屋基础影响",
+   "confidence": 0.5,
+   "description": "排口顶托长期渗漏可能影响周边房屋地基不均匀沉降。"
+  },
+  {
+   "id": "REL0006",
+   "sourceType": "defect",
+   "sourceId": "D0020",
+   "targetType": "fireAccess",
+   "targetId": "F03",
+   "relationType": "消防受阻",
+   "confidence": 0.77,
+   "description": "道路积水/塌陷风险叠加，可能阻碍消防车辆通行。"
+  },
+  {
+   "id": "REL0007",
+   "sourceType": "defect",
+   "sourceId": "D0022",
+   "targetType": "building",
+   "targetId": "B003",
+   "relationType": "房屋基础影响",
+   "confidence": 0.61,
+   "description": "树根侵入长期渗漏可能影响周边房屋地基不均匀沉降。"
+  },
+  {
+   "id": "REL0008",
+   "sourceType": "defect",
+   "sourceId": "D0027",
+   "targetType": "slope",
+   "targetId": "S01",
+   "relationType": "排水不畅",
+   "confidence": 0.64,
+   "description": "箱涵结构性缺陷导致坡体滞水/挡墙渗水风险上升，需与边坡治理协同实施。"
+  },
+  {
+   "id": "REL0009",
+   "sourceType": "defect",
+   "sourceId": "D0027",
+   "targetType": "building",
+   "targetId": "B007",
+   "relationType": "房屋基础影响",
+   "confidence": 0.57,
+   "description": "箱涵结构性缺陷长期渗漏可能影响周边房屋地基不均匀沉降。"
+  },
+  {
+   "id": "REL0010",
+   "sourceType": "defect",
+   "sourceId": "D0029",
+   "targetType": "slope",
+   "targetId": "S01",
+   "relationType": "排水不畅",
+   "confidence": 0.71,
+   "description": "变形导致坡体滞水/挡墙渗水风险上升，需与边坡治理协同实施。"
+  },
+  {
+   "id": "REL0011",
+   "sourceType": "defect",
+   "sourceId": "D0029",
+   "targetType": "building",
+   "targetId": "B004",
+   "relationType": "房屋基础影响",
+   "confidence": 0.76,
+   "description": "变形长期渗漏可能影响周边房屋地基不均匀沉降。"
+  },
+  {
+   "id": "REL0012",
+   "sourceType": "defect",
+   "sourceId": "D0034",
+   "targetType": "building",
+   "targetId": "B009",
+   "relationType": "房屋基础影响",
+   "confidence": 0.78,
+   "description": "树根侵入长期渗漏可能影响周边房屋地基不均匀沉降。"
+  },
+  {
+   "id": "REL0013",
+   "sourceType": "defect",
+   "sourceId": "D0035",
+   "targetType": "slope",
+   "targetId": "S03",
+   "relationType": "渗漏影响",
+   "confidence": 0.75,
+   "description": "腐蚀导致坡体滞水/挡墙渗水风险上升，需与边坡治理协同实施。"
+  },
+  {
+   "id": "REL0014",
+   "sourceType": "defect",
+   "sourceId": "D0035",
+   "targetType": "building",
+   "targetId": "B008",
+   "relationType": "房屋基础影响",
+   "confidence": 0.61,
+   "description": "腐蚀长期渗漏可能影响周边房屋地基不均匀沉降。"
+  },
+  {
+   "id": "REL0015",
+   "sourceType": "defect",
+   "sourceId": "D0035",
+   "targetType": "fireAccess",
+   "targetId": "F01",
+   "relationType": "消防受阻",
+   "confidence": 0.61,
+   "description": "道路积水/塌陷风险叠加，可能阻碍消防车辆通行。"
+  },
+  {
+   "id": "REL0016",
+   "sourceType": "defect",
+   "sourceId": "D0038",
+   "targetType": "building",
+   "targetId": "B014",
+   "relationType": "房屋基础影响",
+   "confidence": 0.82,
+   "description": "淤积长期渗漏可能影响周边房屋地基不均匀沉降。"
+  },
+  {
+   "id": "REL0017",
+   "sourceType": "defect",
+   "sourceId": "D0045",
+   "targetType": "slope",
+   "targetId": "S04",
+   "relationType": "排水不畅",
+   "confidence": 0.63,
+   "description": "堵塞导致坡体滞水/挡墙渗水风险上升，需与边坡治理协同实施。"
+  },
+  {
+   "id": "REL0018",
+   "sourceType": "defect",
+   "sourceId": "D0045",
+   "targetType": "building",
+   "targetId": "B015",
+   "relationType": "房屋基础影响",
+   "confidence": 0.56,
+   "description": "堵塞长期渗漏可能影响周边房屋地基不均匀沉降。"
+  },
+  {
+   "id": "REL0019",
+   "sourceType": "defect",
+   "sourceId": "D0049",
+   "targetType": "slope",
+   "targetId": "S04",
+   "relationType": "排水不畅",
+   "confidence": 0.89,
+   "description": "堵塞导致坡体滞水/挡墙渗水风险上升，需与边坡治理协同实施。"
+  },
+  {
+   "id": "REL0020",
+   "sourceType": "defect",
+   "sourceId": "D0050",
+   "targetType": "slope",
+   "targetId": "S04",
+   "relationType": "渗漏影响",
+   "confidence": 0.62,
+   "description": "混错接导致坡体滞水/挡墙渗水风险上升，需与边坡治理协同实施。"
+  },
+  {
+   "id": "REL0021",
+   "sourceType": "defect",
+   "sourceId": "D0050",
+   "targetType": "building",
+   "targetId": "B015",
+   "relationType": "房屋基础影响",
+   "confidence": 0.72,
+   "description": "混错接长期渗漏可能影响周边房屋地基不均匀沉降。"
+  },
+  {
+   "id": "REL0022",
+   "sourceType": "defect",
+   "sourceId": "D0055",
+   "targetType": "slope",
+   "targetId": "S02",
+   "relationType": "渗漏影响",
+   "confidence": 0.57,
+   "description": "箱涵结构性缺陷导致坡体滞水/挡墙渗水风险上升，需与边坡治理协同实施。"
+  },
+  {
+   "id": "REL0023",
+   "sourceType": "defect",
+   "sourceId": "D0055",
+   "targetType": "building",
+   "targetId": "B017",
+   "relationType": "房屋基础影响",
+   "confidence": 0.52,
+   "description": "箱涵结构性缺陷长期渗漏可能影响周边房屋地基不均匀沉降。"
+  },
+  {
+   "id": "REL0024",
+   "sourceType": "defect",
+   "sourceId": "D0061",
+   "targetType": "slope",
+   "targetId": "S02",
+   "relationType": "渗漏影响",
+   "confidence": 0.77,
+   "description": "混错接导致坡体滞水/挡墙渗水风险上升，需与边坡治理协同实施。"
+  },
+  {
+   "id": "REL0025",
+   "sourceType": "defect",
+   "sourceId": "D0062",
+   "targetType": "slope",
+   "targetId": "S02",
+   "relationType": "渗漏影响",
+   "confidence": 0.76,
+   "description": "混错接导致坡体滞水/挡墙渗水风险上升，需与边坡治理协同实施。"
+  },
+  {
+   "id": "REL0026",
+   "sourceType": "defect",
+   "sourceId": "D0062",
+   "targetType": "building",
+   "targetId": "B017",
+   "relationType": "房屋基础影响",
+   "confidence": 0.66,
+   "description": "混错接长期渗漏可能影响周边房屋地基不均匀沉降。"
+  },
+  {
+   "id": "REL0027",
+   "sourceType": "defect",
+   "sourceId": "D0066",
+   "targetType": "slope",
+   "targetId": "S05",
+   "relationType": "排水不畅",
+   "confidence": 0.63,
+   "description": "堵塞导致坡体滞水/挡墙渗水风险上升，需与边坡治理协同实施。"
+  },
+  {
+   "id": "REL0028",
+   "sourceType": "defect",
+   "sourceId": "D0073",
+   "targetType": "building",
+   "targetId": "B022",
+   "relationType": "房屋基础影响",
+   "confidence": 0.55,
+   "description": "堵塞长期渗漏可能影响周边房屋地基不均匀沉降。"
+  },
+  {
+   "id": "REL0029",
+   "sourceType": "defect",
+   "sourceId": "D0077",
+   "targetType": "building",
+   "targetId": "B021",
+   "relationType": "房屋基础影响",
+   "confidence": 0.5,
+   "description": "堵塞长期渗漏可能影响周边房屋地基不均匀沉降。"
+  },
+  {
+   "id": "REL0030",
+   "sourceType": "culvert",
+   "sourceId": "P030",
+   "targetType": "outlet",
+   "targetId": "O01",
+   "relationType": "排口顶托",
+   "confidence": 0.63,
+   "description": "箱涵结构性缺陷叠加汛期高水位，存在排口顶托、上游壅水风险。"
+  },
+  {
+   "id": "REL0031",
+   "sourceType": "culvert",
+   "sourceId": "P032",
+   "targetType": "outlet",
+   "targetId": "O03",
+   "relationType": "排口顶托",
+   "confidence": 0.76,
+   "description": "箱涵结构性缺陷叠加汛期高水位，存在排口顶托、上游壅水风险。"
+  },
+  {
+   "id": "REL0032",
+   "sourceType": "culvert",
+   "sourceId": "P033",
+   "targetType": "outlet",
+   "targetId": "O04",
+   "relationType": "排口顶托",
+   "confidence": 0.75,
+   "description": "箱涵结构性缺陷叠加汛期高水位，存在排口顶托、上游壅水风险。"
+  },
+  {
+   "id": "REL0033",
+   "sourceType": "culvert",
+   "sourceId": "P034",
+   "targetType": "outlet",
+   "targetId": "O05",
+   "relationType": "排口顶托",
+   "confidence": 0.64,
+   "description": "箱涵结构性缺陷叠加汛期高水位，存在排口顶托、上游壅水风险。"
+  },
+  {
+   "id": "REL0034",
+   "sourceType": "culvert",
+   "sourceId": "P035",
+   "targetType": "outlet",
+   "targetId": "O06",
+   "relationType": "排口顶托",
+   "confidence": 0.7,
+   "description": "箱涵结构性缺陷叠加汛期高水位，存在排口顶托、上游壅水风险。"
+  }
+ ],
+ "meta": {
+  "note": "示意关系数据，用于展示风险链逻辑，非实测因果关系鉴定结论"
+ }
+}

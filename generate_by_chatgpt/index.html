@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>巫山县城迁建区管网复合风险联动分析 | 长江设计集团</title>
+
+<!-- Leaflet -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<!-- ECharts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
+
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div id="app" class="app">
+
+  <!-- ============ 顶部标题栏 ============ -->
+  <header class="hdr">
+    <div class="hdr-brand">
+      <div class="hdr-mark">CWRC</div>
+      <div class="hdr-titles">
+        <h1>巫山县城迁建区管网复合风险联动分析</h1>
+        <p>长江设计集团 &nbsp;|&nbsp; 除险降危实施方案数字化辅助展示</p>
+      </div>
+    </div>
+    <div class="hdr-actions">
+      <span id="tileStatus" class="badge badge-ghost">底图加载中…</span>
+      <button id="btnDemo" class="btn btn-gold">▶ 领导汇报演示</button>
+      <button id="btnReset" class="btn btn-ghost">重置视图</button>
+      <div class="hdr-clock" id="clock"></div>
+    </div>
+  </header>
+
+  <!-- ============ 顶部 KPI 指标卡 ============ -->
+  <section class="kpi-row" id="kpiRow"></section>
+
+  <!-- ============ 主体：左图层 / 中地图 / 右信息面板 ============ -->
+  <main class="main-grid">
+
+    <!-- 左侧图层控制 -->
+    <aside class="panel layer-panel">
+      <div class="panel-title">图层控制</div>
+      <div class="layer-list" id="layerList"></div>
+
+      <div class="panel-title panel-title-sm">迁建小区 / 片区</div>
+      <div class="region-list" id="regionList"></div>
+
+      <div class="legend-block">
+        <div class="panel-title panel-title-sm">缺陷等级图例</div>
+        <div class="legend-row"><span class="dot dot-low"></span>低风险</div>
+        <div class="legend-row"><span class="dot dot-mid"></span>中风险</div>
+        <div class="legend-row"><span class="dot dot-high"></span>高风险</div>
+        <div class="legend-row"><span class="dot dot-critical pulse"></span>重大风险</div>
+      </div>
+    </aside>
+
+    <!-- 中间地图 -->
+    <div class="map-wrap">
+      <div id="map"></div>
+
+      <div class="map-caption" id="mapCaption">
+        迁建区范围为示意，正式成果以甲方提供 GIS 边界为准 ｜ 管网与缺陷数据为汇报演示样例，非实测数据
+      </div>
+
+      <!-- 底图离线兜底提示 -->
+      <div id="offlineBanner" class="offline-banner hidden">
+        底图离线模式：无法连接在线地图服务，已切换为示意深色底图
+      </div>
+
+      <!-- 演示模式字幕条 -->
+      <div id="demoBar" class="demo-bar hidden">
+        <div class="demo-step" id="demoStepLabel">第 1 / 6 步</div>
+        <div class="demo-text" id="demoText">全区总览：巫山县城迁建区管网—坡体—房屋—消防复合风险一张图</div>
+        <div class="demo-controls">
+          <button id="demoPrev" class="btn btn-ghost btn-sm">‹ 上一步</button>
+          <button id="demoNext" class="btn btn-ghost btn-sm">下一步 ›</button>
+          <button id="demoStop" class="btn btn-ghost btn-sm">退出演示</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 右侧信息面板 -->
+    <aside class="panel info-panel" id="infoPanel">
+      <div class="info-empty" id="infoEmpty">
+        <div class="info-empty-icon">◈</div>
+        <div>点击左侧任意迁建小区，或地图中的管线 / 缺陷点</div>
+        <div>查看该片区的管网复合风险画像</div>
+      </div>
+
+      <div id="infoContent" class="info-content hidden">
+        <!-- 由 app.js 动态填充 -->
+      </div>
+    </aside>
+
+  </main>
+
+  <footer class="ftr">
+    <span>数据来源：汇报演示样例数据，管网普查、CCTV/QV 检测、地质勘察等真实数据以甲方确认成果为准</span>
+    <span>长江设计集团 · 巫山县城迁建区除险降危实施方案编制工作组</span>
+  </footer>
+</div>
+
+<!-- 模板：图表容器（信息面板内复用） -->
+<template id="tpl-region-info">
+  <div class="info-header">
+    <div class="info-header-title" id="tRegionTitle">—— 片区管网复合风险画像</div>
+    <div class="info-header-score">
+      <div class="score-num" id="tRiskScore">--</div>
+      <div class="score-label">综合风险分值</div>
+    </div>
+  </div>
+
+  <div class="info-tabs">
+    <button class="info-tab active" data-tab="base">基本信息</button>
+    <button class="info-tab" data-tab="asset">管网资产</button>
+    <button class="info-tab" data-tab="defect">缺陷统计</button>
+    <button class="info-tab" data-tab="risk">风险维度</button>
+    <button class="info-tab" data-tab="flow">上下游关系</button>
+    <button class="info-tab" data-tab="action">治理建议</button>
+  </div>
+
+  <div class="info-tab-panes">
+
+    <div class="tab-pane active" data-pane="base">
+      <div class="kv-grid" id="tBaseGrid"></div>
+    </div>
+
+    <div class="tab-pane" data-pane="asset">
+      <div class="kv-grid" id="tAssetGrid"></div>
+    </div>
+
+    <div class="tab-pane" data-pane="defect">
+      <div id="tDefectChart" class="chart-box"></div>
+    </div>
+
+    <div class="tab-pane" data-pane="risk">
+      <div id="tRiskChart" class="chart-box"></div>
+    </div>
+
+    <div class="tab-pane" data-pane="flow">
+      <div class="flow-diagram" id="tFlowDiagram"></div>
+      <div class="flow-notes" id="tFlowNotes"></div>
+    </div>
+
+    <div class="tab-pane" data-pane="action">
+      <ol class="action-list" id="tActionList"></ol>
+      <div id="tCompareChart" class="chart-box chart-box-sm"></div>
+    </div>
+
+  </div>
+
+  <div class="decision-box">
+    <div class="decision-icon">◆</div>
+    <div class="decision-text" id="tDecisionText"></div>
+  </div>
+</template>
+
+<template id="tpl-pipe-info">
+  <div class="info-header">
+    <div class="info-header-title" id="pPipeTitle">—— 管段信息</div>
+    <div class="badge" id="pPipeRisk">--</div>
+  </div>
+  <div class="kv-grid" id="pPipeGrid"></div>
+  <div class="panel-title panel-title-sm">该管段风险链</div>
+  <div class="chain-diagram" id="pChain"></div>
+</template>
+
+<template id="tpl-defect-info">
+  <div class="info-header">
+    <div class="info-header-title" id="dDefectTitle">—— 缺陷详情</div>
+    <div class="badge" id="dDefectSeverity">--</div>
+  </div>
+  <div class="kv-grid" id="dDefectGrid"></div>
+  <div class="photo-placeholder" id="dPhoto">现场照片占位图（待甲方 / 现场普查照片补充）</div>
+  <div class="panel-title panel-title-sm">关联影响关系</div>
+  <div class="chain-diagram" id="dRelations"></div>
+</template>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>巫山城市安全调研数字孪生系统 V1</title>
+  <link rel="stylesheet" href="./vendor/leaflet/leaflet.css">
+  <link rel="stylesheet" href="./src/styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="system-sidebar" aria-label="系统控制面板">
+      <header class="brand-block">
+        <div class="eyebrow">Wushan Digital Twin</div>
+        <h1>巫山城市安全调研数字孪生系统</h1>
+        <p>以供水管线为主图层，叠加排水缺陷与防洪排涝通道。</p>
+      </header>
+
+      <nav class="module-tabs" aria-label="模块导航">
+        <button class="tab-button active" data-tab="overview">总览</button>
+        <button class="tab-button" data-tab="layers">图层</button>
+      </nav>
+
+      <section class="tab-panel active" data-panel="overview">
+        <div class="metric-grid">
+          <article class="metric-card">
+            <span>供水管线</span>
+            <strong id="metricPipeLength">--</strong>
+          </article>
+          <article class="metric-card">
+            <span>供水线段</span>
+            <strong id="metricPipeSegments">--</strong>
+          </article>
+          <article class="metric-card">
+            <span>供水节点</span>
+            <strong id="metricPipeNodes">--</strong>
+          </article>
+          <article class="metric-card">
+            <span>可叠加图层</span>
+            <strong id="metricLayerCount">--</strong>
+          </article>
+        </div>
+        <div class="info-box">
+          <h2>数据状态</h2>
+          <p>供水主图层已使用奥维导出的标准 GeoJSON 真实线几何；排水缺陷和防洪排涝也已优先接入标准 GeoJSON。</p>
+        </div>
+      </section>
+
+      <section class="tab-panel" data-panel="layers">
+        <div class="panel-title-row">
+          <h2>图层管理</h2>
+          <button class="small-button" id="clearTopicLayers">关闭专题</button>
+        </div>
+
+        <article class="topic-card layer-card">
+          <label class="topic-main">
+            <input type="checkbox" id="toggleWater" checked>
+            <span>
+              <h3>供水管线图</h3>
+              <div class="topic-meta">标准 GeoJSON 主图层 · <span id="waterLayerMeta">--</span></div>
+            </span>
+          </label>
+          <div class="topic-tools">
+            <button id="fitPipes">定位</button>
+            <label class="inline-check"><input type="checkbox" id="toggleWaterNodes"> 管点/节点</label>
+          </div>
+          <details class="layer-details">
+            <summary>数据概况</summary>
+            <dl id="waterLayerDetails"></dl>
+          </details>
+        </article>
+
+        <div class="topic-layer-list" id="topicLayerList"></div>
+      </section>
+    </aside>
+
+    <main class="map-workspace">
+      <header class="workspace-header">
+        <div>
+          <h2>空间一张图</h2>
+          <p id="statusLine">正在初始化图层...</p>
+        </div>
+        <div class="header-actions">
+          <button id="toggleBasemap">底图：街道</button>
+          <button id="fitAll">回到全图</button>
+        </div>
+      </header>
+      <div class="map-frame">
+        <div id="map" aria-label="巫山专题地图"></div>
+        <div class="map-legend" id="mapLegend"></div>
+      </div>
+    </main>
+  </div>
+
+  <script src="./vendor/leaflet/leaflet.js"></script>
+  <script src="./data/pipes.js"></script>
+  <script src="./data/summary.js"></script>
+  <script src="./data/layers/catalog.js"></script>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>

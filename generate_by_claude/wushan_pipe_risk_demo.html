@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>巫山县城迁建区管网复合风险联动分析</title>
+<style>
+:root{
+  --bg:#07182c;
+  --bg2:#0a233e;
+  --panel:rgba(8,28,48,.78);
+  --panel2:rgba(13,42,71,.64);
+  --line:#3ee6ff;
+  --cyan:#2ee8ff;
+  --blue:#3aa8ff;
+  --purple:#b36bff;
+  --orange:#ffb34d;
+  --red:#ff4f5f;
+  --gold:#ffd166;
+  --green:#8de374;
+  --text:#eaf7ff;
+  --muted:#9fb8cc;
+  --weak:#5d7890;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:"Microsoft YaHei","PingFang SC","Noto Sans CJK SC",Arial,sans-serif;background:#061526;color:var(--text);overflow:hidden;}
+body{background:radial-gradient(circle at 20% 10%,rgba(0,195,255,.16),transparent 32%),radial-gradient(circle at 75% 20%,rgba(67,114,255,.18),transparent 30%),linear-gradient(135deg,#06172b 0%,#08213a 45%,#050f1e 100%);}
+.dashboard{position:relative;width:100vw;height:100vh;min-width:1200px;min-height:720px;padding:22px 26px 20px 26px;}
+.gridGlow{position:absolute;inset:0;background-image:linear-gradient(rgba(86,202,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(86,202,255,.06) 1px,transparent 1px);background-size:44px 44px;mask-image:linear-gradient(to bottom,rgba(0,0,0,.8),rgba(0,0,0,.1));pointer-events:none;}
+.header{height:82px;display:flex;align-items:flex-start;justify-content:space-between;position:relative;z-index:5;}
+.titleBlock h1{margin:0;font-size:31px;letter-spacing:1px;font-weight:700;text-shadow:0 0 16px rgba(47,232,255,.45);}
+.titleBlock .sub{margin-top:7px;color:#b9d4e8;font-size:14px;letter-spacing:.5px;}
+.brand{display:flex;gap:12px;align-items:center;text-align:right;color:#caeaff;font-size:14px;}
+.logo{width:46px;height:46px;border-radius:12px;background:linear-gradient(135deg,#0fa7ff,#55f0ff);box-shadow:0 0 26px rgba(47,232,255,.45);position:relative;}
+.logo:before{content:"";position:absolute;left:10px;top:10px;width:26px;height:26px;border:2px solid #fff;border-left-color:transparent;border-radius:50%;transform:rotate(-30deg)}
+.main{height:calc(100vh - 112px);display:grid;grid-template-columns: minmax(760px, 1fr) 430px;gap:18px;position:relative;z-index:2;}
+.left{display:grid;grid-template-rows:92px 1fr 118px;gap:14px;min-height:0;}
+.cards{display:grid;grid-template-columns:repeat(8,1fr);gap:10px;}
+.card{position:relative;overflow:hidden;border:1px solid rgba(65,211,255,.24);background:linear-gradient(180deg,rgba(15,58,92,.75),rgba(7,31,55,.56));border-radius:14px;padding:12px 12px 8px;box-shadow:inset 0 0 28px rgba(42,196,255,.05),0 8px 20px rgba(0,0,0,.16)}
+.card:after{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--cyan),transparent);opacity:.7}
+.card .label{font-size:12px;color:#a7c8db;white-space:nowrap;}
+.card .num{font-size:22px;font-weight:700;margin-top:5px;color:#f5fbff;letter-spacing:.2px;}
+.card .unit{font-size:12px;color:#7fb1c9;margin-left:2px;}
+.mapWrap{position:relative;border-radius:22px;border:1px solid rgba(88,218,255,.25);overflow:hidden;background:linear-gradient(135deg,rgba(7,29,54,.86),rgba(5,18,35,.95));box-shadow:0 16px 42px rgba(0,0,0,.28), inset 0 0 50px rgba(50,205,255,.05);min-height:0;}
+.mapToolbar{position:absolute;left:16px;top:14px;z-index:20;display:flex;gap:8px;align-items:center;flex-wrap:wrap;max-width:78%;}
+.btn{border:1px solid rgba(72,220,255,.38);background:rgba(9,39,68,.78);color:#dff8ff;border-radius:999px;padding:8px 12px;font-size:13px;cursor:pointer;backdrop-filter:blur(8px);box-shadow:0 4px 16px rgba(0,0,0,.18);user-select:none;}
+.btn:hover,.btn.active{background:rgba(40,197,255,.22);border-color:rgba(83,235,255,.72);box-shadow:0 0 18px rgba(66,230,255,.25)}
+.legend{position:absolute;left:16px;bottom:14px;z-index:20;background:rgba(4,20,36,.66);border:1px solid rgba(86,211,255,.22);border-radius:14px;padding:10px 12px;display:grid;grid-template-columns:repeat(3,auto);gap:8px 14px;backdrop-filter: blur(8px);font-size:12px;color:#bfe4f5;}
+.legend i{display:inline-block;width:22px;height:4px;border-radius:4px;vertical-align:middle;margin-right:6px;}
+.legend .dot{width:10px;height:10px;border-radius:50%;}
+.notice{position:absolute;right:15px;bottom:16px;z-index:20;font-size:12px;color:#aac7d8;background:rgba(4,20,36,.62);border:1px solid rgba(86,211,255,.22);padding:8px 11px;border-radius:12px;max-width:420px;line-height:1.5;}
+svg#map{width:100%;height:100%;display:block;}
+.contour{fill:none;stroke:rgba(124,192,217,.09);stroke-width:1.2;}
+.terrainFill{fill:url(#terrainGrad);opacity:.78}
+.river{fill:url(#riverGrad);filter:drop-shadow(0 0 15px rgba(55,220,255,.12));}
+.riverLabel{fill:rgba(210,245,255,.5);font-size:19px;letter-spacing:8px;font-weight:600;}
+.region{fill:rgba(57,150,192,.24);stroke:rgba(90,231,255,.72);stroke-width:1.5;cursor:pointer;transition:opacity .25s, filter .25s, fill .25s, stroke-width .25s;}
+.region:hover{fill:rgba(86,220,255,.38);filter:drop-shadow(0 0 8px rgba(75,226,255,.55));}
+.region.selected{fill:rgba(255,209,102,.38);stroke:var(--gold);stroke-width:3;filter:drop-shadow(0 0 15px rgba(255,209,102,.62));}
+.region.dimmed{opacity:.18;filter:saturate(.4);}
+.regionLabel{fill:#def8ff;font-size:14px;font-weight:700;text-shadow:0 1px 4px #001a2c;pointer-events:none;}
+.regionLabel.dimmed{opacity:.25}.regionLabel.selected{fill:#fff0b2;font-size:17px;}
+.pipe{fill:none;stroke-width:3.2;stroke-linecap:round;stroke-linejoin:round;opacity:.82;cursor:pointer;filter:drop-shadow(0 0 5px rgba(0,0,0,.45));transition:opacity .2s, stroke-width .2s, filter .2s;}
+.pipe.storm{stroke:var(--blue);marker-end:url(#arrowBlue);}
+.pipe.sewage{stroke:var(--purple);marker-end:url(#arrowPurple);}
+.pipe.combined{stroke:var(--orange);stroke-dasharray:9 7;marker-end:url(#arrowOrange);}
+.pipe.culvert{stroke:var(--cyan);stroke-width:7;opacity:.72;marker-end:url(#arrowCyan);}
+.pipe.highlight{opacity:1;stroke-width:6.2;filter:drop-shadow(0 0 14px currentColor);animation:pulseLine 1.8s infinite ease-in-out;}
+.pipe.faded{opacity:.13;filter:none}.pipe:hover{stroke-width:5;opacity:1}
+.flowDash{stroke-dasharray:1 18;stroke-linecap:round;animation:dash 2.2s linear infinite;}
+.defect{cursor:pointer;stroke:#fff;stroke-width:1.2;filter:drop-shadow(0 0 8px rgba(255,79,95,.38));transition:opacity .2s, r .2s;}
+.defect.major{animation:breath 1.6s infinite ease-in-out;}
+.defect.faded{opacity:.16}.defect.highlight{r:8;opacity:1;filter:drop-shadow(0 0 15px rgba(255,79,95,.78));}
+.relation{stroke:rgba(255,209,102,.72);stroke-width:1.7;stroke-dasharray:6 7;fill:none;opacity:.0;pointer-events:none;}
+.relation.show{opacity:.9;animation:dash 4s linear infinite;}
+.hotpoint{fill:rgba(255,79,95,.75);stroke:#fff;stroke-width:1;filter:drop-shadow(0 0 8px rgba(255,79,95,.45));}
+.outlet{fill:#14283e;stroke:#4eefff;stroke-width:2}.outlet.active{stroke:#ffd166;stroke-width:3;filter:drop-shadow(0 0 12px rgba(255,209,102,.65))}
+.buffer{fill:rgba(255,79,95,.13);stroke:rgba(255,79,95,.55);stroke-width:1.5;stroke-dasharray:5 4;opacity:0;pointer-events:none}.buffer.show{opacity:1}
+.bottomPanel{display:grid;grid-template-columns:1.15fr 1fr 1.1fr;gap:14px;}
+.smallPanel{border:1px solid rgba(86,211,255,.21);border-radius:16px;background:rgba(5,25,46,.65);padding:13px 15px;box-shadow:inset 0 0 28px rgba(53,215,255,.04);overflow:hidden;}
+.smallPanel h3{margin:0 0 9px;font-size:15px;color:#dff8ff;font-weight:700;display:flex;align-items:center;gap:8px;}
+.smallPanel h3:before{content:"";width:4px;height:15px;background:linear-gradient(#36e4ff,#ffd166);border-radius:4px;display:inline-block}
+.chain{display:flex;align-items:center;gap:8px;font-size:12px;color:#c2dceb;line-height:1.3;}
+.chain span{display:inline-flex;align-items:center;justify-content:center;min-width:54px;height:38px;border:1px solid rgba(90,223,255,.25);background:rgba(20,69,102,.48);border-radius:11px;padding:0 7px;text-align:center}.chain b{color:#ffd166;font-weight:500}
+.list{font-size:12px;color:#b7d0df;line-height:1.55;margin:0;padding-left:17px;}
+.side{min-height:0;display:grid;grid-template-rows:auto 1fr;gap:14px;}
+.sideTop{border:1px solid rgba(87,220,255,.24);border-radius:18px;background:linear-gradient(180deg,rgba(9,39,69,.78),rgba(5,23,42,.84));box-shadow:0 16px 42px rgba(0,0,0,.22), inset 0 0 42px rgba(50,205,255,.05);padding:16px;}
+.sideTitle{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;border-bottom:1px solid rgba(120,219,255,.14);padding-bottom:12px;margin-bottom:14px;}
+.sideTitle h2{margin:0;font-size:21px;color:#f3fbff}.sideTitle small{display:block;margin-top:5px;color:#9bb9ca;font-size:12px}
+.badge{padding:6px 10px;border-radius:999px;font-weight:700;font-size:12px;background:rgba(255,209,102,.16);color:#ffe0a1;border:1px solid rgba(255,209,102,.38);white-space:nowrap}
+.infoGrid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px;}
+.infoItem{border:1px solid rgba(88,214,255,.16);border-radius:12px;background:rgba(3,20,38,.36);padding:9px 10px;}
+.infoItem .k{font-size:12px;color:#91aec1}.infoItem .v{font-size:18px;margin-top:3px;font-weight:700;color:#f6fbff}.infoItem .v small{font-size:11px;color:#8fb1c5;margin-left:2px}
+.panelScroll{overflow:auto;border:1px solid rgba(87,220,255,.2);border-radius:18px;background:rgba(4,18,35,.54);padding:16px;min-height:0;}
+.section{margin-bottom:17px}.section h3{margin:0 0 10px;font-size:15px;color:#dff9ff;display:flex;align-items:center;gap:8px}.section h3:before{content:"";display:inline-block;width:4px;height:14px;border-radius:5px;background:#40e5ff}
+.riskScore{display:flex;align-items:center;gap:14px}.gauge{width:96px;height:96px;border-radius:50%;background:conic-gradient(var(--red) 0deg, var(--orange) 115deg, var(--gold) 245deg, rgba(255,255,255,.08) 245deg 360deg);display:flex;align-items:center;justify-content:center;position:relative;box-shadow:0 0 22px rgba(255,209,102,.12)}
+.gauge:after{content:"";position:absolute;inset:10px;border-radius:50%;background:#08213a}.gauge .score{position:relative;z-index:1;font-size:28px;font-weight:800;color:#fff}.gaugeText{font-size:12px;color:#abc6d7;line-height:1.6}.gaugeText b{color:#ffd166;font-size:15px}
+.barRow{display:grid;grid-template-columns:82px 1fr 32px;gap:8px;align-items:center;margin:7px 0;font-size:12px;color:#b9d5e4}.barTrack{height:8px;background:rgba(255,255,255,.08);border-radius:99px;overflow:hidden}.barFill{height:100%;border-radius:99px;background:linear-gradient(90deg,#29d2ff,#ffd166,#ff5a66)}
+.radarWrap{display:flex;justify-content:center}.decision{border:1px solid rgba(255,209,102,.28);background:rgba(255,209,102,.08);border-radius:14px;padding:11px 12px;line-height:1.55;color:#f3e4bd;font-size:13px;}
+.networkMini{height:118px;border:1px solid rgba(86,211,255,.16);border-radius:14px;background:rgba(1,15,29,.35);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}.node{position:absolute;border:1px solid rgba(77,226,255,.45);background:rgba(16,66,100,.86);border-radius:12px;padding:7px 10px;font-size:12px;color:#dffaff}.link{position:absolute;height:2px;background:linear-gradient(90deg,rgba(67,223,255,.2),#40e5ff,rgba(255,209,102,.75));transform-origin:left center;}
+.tooltip{position:absolute;pointer-events:none;z-index:100;background:rgba(3,18,33,.92);border:1px solid rgba(91,230,255,.35);border-radius:10px;padding:9px 11px;color:#eaf9ff;font-size:12px;line-height:1.45;box-shadow:0 10px 28px rgba(0,0,0,.35);display:none;max-width:250px;}
+.watermark{position:absolute;right:470px;top:90px;color:rgba(161,221,246,.08);font-size:64px;font-weight:800;letter-spacing:8px;z-index:1;pointer-events:none;}
+@keyframes dash{to{stroke-dashoffset:-80}}
+@keyframes pulseLine{0%,100%{filter:drop-shadow(0 0 8px rgba(255,209,102,.35))}50%{filter:drop-shadow(0 0 22px rgba(255,209,102,.85))}}
+@keyframes breath{0%,100%{transform:scale(1);opacity:.82}50%{transform:scale(1.35);opacity:1}}
+@media(max-width:1400px){.dashboard{padding:16px}.main{grid-template-columns:1fr 390px}.cards{grid-template-columns:repeat(4,1fr);height:170px}.left{grid-template-rows:170px 1fr 118px}.card .num{font-size:20px}.titleBlock h1{font-size:26px}}
+</style>
+</head>
+<body>
+<div class="dashboard">
+  <div class="gridGlow"></div><div class="watermark">RISK CHAIN</div>
+  <div class="header">
+    <div class="titleBlock">
+      <h1>巫山县城迁建区管网复合风险联动分析</h1>
+      <div class="sub">水—管—坡—墙—房—人：除险降危实施方案数字化辅助展示｜演示原型</div>
+    </div>
+    <div class="brand"><div><b>长江设计集团</b><br><span style="color:#8fb1c5">城市安全体检 · 风险排序 · 项目生成</span></div><div class="logo"></div></div>
+  </div>
+  <div class="main">
+    <div class="left">
+      <div class="cards" id="cards"></div>
+      <div class="mapWrap">
+        <div class="mapToolbar">
+          <button class="btn active" onclick="resetView()">全区总览</button>
+          <button class="btn" onclick="startDemo()">领导汇报演示模式</button>
+          <button class="btn layerBtn active" data-layer="storm" onclick="toggleLayer(this)">雨水管网</button>
+          <button class="btn layerBtn active" data-layer="sewage" onclick="toggleLayer(this)">污水管网</button>
+          <button class="btn layerBtn active" data-layer="combined" onclick="toggleLayer(this)">混错接/合流</button>
+          <button class="btn layerBtn active" data-layer="culvert" onclick="toggleLayer(this)">排洪箱涵</button>
+          <button class="btn layerBtn active" data-layer="defects" onclick="toggleLayer(this)">缺陷点</button>
+        </div>
+        <div class="legend">
+          <span><i style="background:var(--blue)"></i>雨水管</span><span><i style="background:var(--purple)"></i>污水管</span><span><i style="background:var(--orange)"></i>混错接</span>
+          <span><i style="background:var(--cyan);height:7px"></i>排洪箱涵</span><span><i class="dot" style="background:var(--red)"></i>重大缺陷</span><span><i class="dot" style="background:var(--gold)"></i>高风险节点</span>
+        </div>
+        <div class="notice">示意数据｜管网、缺陷、片区边界待甲方 GIS、CCTV/QV 检测、管网普查成果校核。点击片区/管段/缺陷点查看联动风险。</div>
+        <div class="tooltip" id="tooltip"></div>
+        <svg id="map" viewBox="0 0 1000 650" preserveAspectRatio="xMidYMid meet">
+          <defs>
+            <linearGradient id="riverGrad" x1="0" x2="1"><stop offset="0" stop-color="#07537a"/><stop offset=".55" stop-color="#0f8fab"/><stop offset="1" stop-color="#55d9ef"/></linearGradient>
+            <radialGradient id="terrainGrad" cx="35%" cy="40%" r="72%"><stop offset="0" stop-color="#174464"/><stop offset=".8" stop-color="#071c34"/></radialGradient>
+            <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#3aa8ff"/></marker>
+            <marker id="arrowPurple" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#b36bff"/></marker>
+            <marker id="arrowOrange" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#ffb34d"/></marker>
+            <marker id="arrowCyan" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#2ee8ff"/></marker>
+            <filter id="glow"><feGaussianBlur stdDeviation="3" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+          </defs>
+          <rect x="0" y="0" width="1000" height="650" class="terrainFill"/>
+          <g id="contours"></g>
+          <path class="river" d="M0 500 C120 475,190 535,320 505 C450 470,510 430,635 452 C760 475,828 435,1000 393 L1000 650 L0 650 Z"></path>
+          <path class="river" opacity=".58" d="M705 0 C735 75,763 110,752 184 C738 270,790 326,1000 370 L1000 440 C804 402,680 338,680 245 C681 152,654 72,610 0 Z"></path>
+          <text class="riverLabel" x="735" y="535" transform="rotate(-12 735 535)">长江</text>
+          <text class="riverLabel" x="740" y="190" transform="rotate(72 740 190)">大宁河</text>
+          <g id="regions"></g>
+          <g id="pipes"></g>
+          <g id="relations"></g>
+          <g id="defects"></g>
+          <g id="labels"></g>
+        </svg>
+      </div>
+      <div class="bottomPanel">
+        <div class="smallPanel"><h3>复合风险链表达</h3><div class="chain"><span>强降雨<br>/库水</span><b>→</b><span>管网<br>缺陷</span><b>→</b><span>坡体<br>滞水</span><b>→</b><span>挡墙/房屋<br>变形</span><b>→</b><span>居民<br>风险</span></div></div>
+        <div class="smallPanel"><h3>当前联动识别</h3><ul class="list" id="linkageList"><li>全区视图：优先关注缺陷密集、临坡临江、人口暴露高的复合片区。</li><li>点击片区后自动提取上下游管网、排口、边坡与房屋影响关系。</li></ul></div>
+        <div class="smallPanel"><h3>项目库转化逻辑</h3><ul class="list"><li>单点缺陷 → 管段修复项目</li><li>管段瓶颈 → 片区排水能力提升项目</li><li>管网-边坡-房屋叠加 → 综合除险降危项目</li></ul></div>
+      </div>
+    </div>
+    <div class="side">
+      <div class="sideTop">
+        <div class="sideTitle"><div><h2 id="regionTitle">全区综合态势</h2><small id="regionSub">巫山县城迁建区｜点击片区进入风险画像</small></div><span class="badge" id="riskBadge">综合研判</span></div>
+        <div class="infoGrid" id="infoGrid"></div>
+      </div>
+      <div class="panelScroll" id="detailPanel"></div>
+    </div>
+  </div>
+</div>
+<script>
+const regions = [
+ {id:'chaoyun', name:'朝云', cx:250, cy:205, pts:'165,155 270,132 335,170 318,236 214,246 148,205', area:0.42, pop:1.08, households:3900, riskScore:71, riskLevel:'高风险', storm:28.3, sewage:20.4, combined:2.5, culvert:0.8, defects:13, major:3, slopes:15, buildings:22, priority:'近期', topRisk:'老旧支管渗漏与消防通道瓶颈叠加', rec:'优先开展雨污混错接改造、支管修复与消防取水点补足。', dims:[72,66,58,71,60,76,74]},
+ {id:'cuiping', name:'翠屏', cx:392, cy:190, pts:'330,137 463,132 515,178 492,245 386,250 318,236 335,170', area:0.38, pop:0.92, households:3100, riskScore:63, riskLevel:'中高风险', storm:22.8, sewage:17.2, combined:1.4, culvert:0.5, defects:9, major:1, slopes:9, buildings:15, priority:'中期', topRisk:'坡面汇水集中进入下游箱涵', rec:'结合高边坡截排水沟复核，完善坡面雨水收集系统。', dims:[58,64,52,61,48,59,62]},
+ {id:'denglong', name:'登龙', cx:535, cy:210, pts:'500,150 615,160 674,208 630,276 505,268 492,245 515,178', area:0.47, pop:1.15, households:4200, riskScore:69, riskLevel:'高风险', storm:30.1, sewage:18.6, combined:3.0, culvert:1.1, defects:12, major:2, slopes:12, buildings:18, priority:'近期', topRisk:'排水通道断面不足与节点井淤积', rec:'复核排洪能力，疏通关键节点井并进行管径扩容论证。', dims:[70,73,62,64,55,61,70]},
+ {id:'feifeng', name:'飞凤', cx:680, cy:292, pts:'630,276 735,265 798,314 780,386 670,380 618,320', area:0.35, pop:0.86, households:2950, riskScore:58, riskLevel:'中风险', storm:20.5, sewage:15.4, combined:1.2, culvert:0.4, defects:7, major:1, slopes:6, buildings:9, priority:'远期', topRisk:'局部雨污混接及排口回水影响', rec:'纳入雨污分流改造，排口设置防倒灌措施。', dims:[50,57,49,45,44,50,55]},
+ {id:'jixian', name:'集仙', cx:315, cy:330, pts:'214,246 318,236 386,250 410,340 352,405 245,392 190,326', area:0.62, pop:1.72, households:6200, riskScore:91, riskLevel:'重大风险', storm:43.6, sewage:31.2, combined:6.8, culvert:2.4, defects:28, major:9, slopes:31, buildings:46, priority:'近期优先', topRisk:'管网渗漏—坡体滞水—房屋开裂叠加', rec:'作为近期综合治理样板，优先实施管网修复、截排水、挡墙监测、危房处置联动项目。', dims:[92,88,83,91,86,78,94]},
+ {id:'jingta', name:'净坛', cx:495, cy:352, pts:'410,340 505,268 618,320 600,405 500,435 415,410', area:0.46, pop:1.20, households:4350, riskScore:77, riskLevel:'高风险', storm:31.4, sewage:24.5, combined:3.6, culvert:1.2, defects:17, major:4, slopes:17, buildings:24, priority:'近期', topRisk:'主干雨水管功能性缺陷与下游箱涵瓶颈', rec:'先行 CCTV/QV 复核，开展清淤、结构修复与箱涵过流能力校核。', dims:[78,81,70,72,62,66,75]},
+ {id:'qiyun', name:'起云', cx:185, cy:390, pts:'96,300 190,326 245,392 220,480 120,492 64,420', area:0.44, pop:1.05, households:3800, riskScore:84, riskLevel:'高风险', storm:35.1, sewage:21.6, combined:4.1, culvert:1.9, defects:20, major:5, slopes:21, buildings:31, priority:'近期', topRisk:'宿舍区污水管道破损与山洪沟交汇', rec:'优先排查老旧宿舍区管道破损，联动山洪沟清障与入河排口复核。', dims:[82,77,86,80,74,72,78]},
+ {id:'shangsheng', name:'上升', cx:335, cy:485, pts:'245,392 352,405 415,410 430,504 350,570 235,548 220,480', area:0.40, pop:1.10, households:4000, riskScore:79, riskLevel:'高风险', storm:29.8, sewage:19.8, combined:4.4, culvert:1.0, defects:18, major:4, slopes:15, buildings:26, priority:'近期', topRisk:'内涝点与排水支管淤积叠加', rec:'结合易涝点布设雨水口改造和管道清淤，消除低洼积水。', dims:[76,79,88,62,65,70,74]},
+ {id:'shennv', name:'神女', cx:545, cy:500, pts:'430,504 500,435 600,405 680,485 640,570 520,592 450,560', area:0.50, pop:1.23, households:4500, riskScore:73, riskLevel:'高风险', storm:26.4, sewage:22.1, combined:2.6, culvert:0.7, defects:14, major:3, slopes:12, buildings:20, priority:'中期', topRisk:'道路狭窄导致消防车可达性受限', rec:'与老旧小区更新同步实施消防通道打通和消火栓补点。', dims:[61,65,60,55,62,88,72]},
+ {id:'shengquan', name:'圣泉', cx:755, cy:450, pts:'680,380 780,386 850,455 820,555 700,566 680,485', area:0.43, pop:1.02, households:3600, riskScore:68, riskLevel:'中高风险', storm:24.2, sewage:18.8, combined:1.7, culvert:0.6, defects:10, major:2, slopes:7, buildings:13, priority:'中期', topRisk:'排口顶托与消防供水覆盖不足', rec:'复核排口高程，增设防倒灌设施并优化消防取水覆盖。', dims:[62,66,59,50,48,75,62]},
+ {id:'songluan', name:'松峦', cx:172, cy:250, pts:'96,300 148,205 214,246 190,326', area:0.37, pop:0.90, households:3250, riskScore:88, riskLevel:'重大风险', storm:25.9, sewage:19.0, combined:5.2, culvert:1.3, defects:19, major:6, slopes:28, buildings:34, priority:'近期优先', topRisk:'高危险区与管网渗漏叠加', rec:'作为高危险社区，优先开展地质—管网联合踏勘与监测预警布设。', dims:[85,80,74,92,82,70,86]},
+ {id:'ningjiang', name:'宁江', cx:702, cy:170, pts:'615,160 740,120 852,160 860,245 735,265 674,208', area:0.41, pop:0.98, households:3400, riskScore:75, riskLevel:'高风险', storm:23.4, sewage:21.5, combined:2.2, culvert:0.9, defects:15, major:3, slopes:13, buildings:21, priority:'中期', topRisk:'基础开裂沉降与排水不畅关系待核查', rec:'对开裂沉降房屋周边排水管进行雷达探测与渗漏复核。', dims:[72,70,55,73,79,58,66]},
+ {id:'juhe', name:'聚鹤', cx:835, cy:335, pts:'798,314 900,300 955,390 910,498 850,455 780,386', area:0.39, pop:0.78, households:2700, riskScore:61, riskLevel:'中风险', storm:18.9, sewage:14.0, combined:1.0, culvert:0.4, defects:6, major:1, slopes:5, buildings:8, priority:'远期', topRisk:'滨江排口与下游回水关系', rec:'纳入排口防倒灌复核，保留日常巡检与汛前清障。', dims:[52,56,48,42,40,49,50]},
+ {id:'xiping', name:'西坪村', cx:102, cy:190, pts:'35,110 165,155 148,205 96,300 35,260', area:0.56, pop:1.10, households:4050, riskScore:67, riskLevel:'中高风险', storm:26.6, sewage:14.7, combined:1.8, culvert:0.7, defects:10, major:2, slopes:16, buildings:14, priority:'中期', topRisk:'坡地汇水与分散式管网管理薄弱', rec:'完善村域排水系统图册，建立山洪沟—管网联合巡查机制。', dims:[60,62,57,76,50,47,58]}
+];
+const metrics = [
+ ['迁建区面积','6.80','km²'],['常住人口','15.30','万人'],['迁建片区','14','个'],['市政管网','415.09','km'],['箱涵/渠道','12.98','km'],['管网缺陷','147','处'],['高切坡','249','处'],['高挡墙','36','处']
+];
+const pipes = [
+ {id:'p1', type:'storm', name:'西部雨水主干线', path:'M85 170 C150 220,190 280,240 342 C290 405,320 452,365 520', regions:['xiping','songluan','qiyun','shangsheng'], diameter:'DN800-DN1200', material:'钢筋混凝土', length:5.7, risk:'高', defects:13, action:'清淤+结构修复+节点井复核'},
+ {id:'p2', type:'storm', name:'中部雨水主干线', path:'M285 145 C360 208,420 270,465 345 C510 420,550 470,610 535', regions:['chaoyun','cuiping','jixian','jingta','shennv'], diameter:'DN600-DN1000', material:'混凝土/HDPE', length:7.4, risk:'高', defects:18, action:'CCTV 检测后分段非开挖修复'},
+ {id:'p3', type:'sewage', name:'南北向污水收集干管', path:'M145 420 C270 390,360 385,455 410 C570 440,675 485,800 520', regions:['qiyun','shangsheng','jingta','shennv','shengquan'], diameter:'DN500-DN800', material:'混凝土', length:8.1, risk:'中高', defects:16, action:'污水支管排查与混错接整改'},
+ {id:'p4', type:'combined', name:'集仙—松峦混错接疑似管段', path:'M174 258 C226 284,254 314,305 348', regions:['songluan','jixian'], diameter:'DN400-DN600', material:'旧混凝土管', length:2.2, risk:'重大', defects:9, action:'雨污分流改造+渗漏点封堵'},
+ {id:'p5', type:'culvert', name:'起云山洪沟排洪箱涵', path:'M60 365 C138 387,220 425,310 492', regions:['qiyun','shangsheng'], diameter:'箱涵 2.5m×2.0m', material:'钢筋混凝土箱涵', length:1.9, risk:'高', defects:11, action:'箱涵清障、底板脱空检测与结构加固'},
+ {id:'p6', type:'culvert', name:'中部暗涵排洪通道', path:'M410 180 C458 250,494 330,548 410 C598 480,645 520,710 548', regions:['cuiping','denglong','jingta','shennv','shengquan'], diameter:'箱涵 3.0m×2.4m', material:'钢筋混凝土箱涵', length:3.1, risk:'高', defects:14, action:'三维激光扫描+过流能力复核'},
+ {id:'p7', type:'sewage', name:'滨江污水截流管', path:'M350 560 C495 590,650 570,860 470', regions:['shangsheng','shennv','shengquan','juhe'], diameter:'DN800', material:'球墨铸铁/混凝土', length:6.8, risk:'中', defects:8, action:'排口顶托复核与截流能力校核'},
+ {id:'p8', type:'storm', name:'东部入江雨水通道', path:'M650 180 C725 255,790 310,890 410', regions:['ningjiang','feifeng','juhe'], diameter:'DN600-DN1000', material:'钢筋混凝土', length:4.6, risk:'中高', defects:9, action:'排口防倒灌+边坡滞水点排查'},
+ {id:'p9', type:'combined', name:'宁江片区支管暗接疑似段', path:'M690 155 C705 210,700 245,660 295', regions:['ningjiang','denglong','jingta'], diameter:'DN300-DN500', material:'旧混凝土管', length:1.6, risk:'高', defects:7, action:'混错接摸排与暗接封堵'}
+];
+const defects = [
+ {id:'D01', pipeId:'p4', regionId:'jixian', x:286,y:331,type:'渗漏', severity:'重大', score:92, action:'开挖核查+非开挖内衬修复', desc:'疑似长期渗漏导致坡体滞水，影响邻近挡墙与房屋基础。'},
+ {id:'D02', pipeId:'p4', regionId:'songluan', x:185,y:270,type:'破裂', severity:'重大', score:90, action:'立即复核并临时导排', desc:'高危险区邻近破裂点，需与地灾监测联动。'},
+ {id:'D03', pipeId:'p5', regionId:'qiyun', x:134,y:390,type:'箱涵淤积', severity:'高', score:82, action:'汛前清障+淤积物清理', desc:'山洪沟与生活污水交汇，汛期顶托风险较高。'},
+ {id:'D04', pipeId:'p5', regionId:'shangsheng', x:286,y:480,type:'内涝瓶颈', severity:'高', score:79, action:'雨水口改造+局部扩容', desc:'低洼积水点与支管淤积叠加。'},
+ {id:'D05', pipeId:'p2', regionId:'jingta', x:485,y:346,type:'变形', severity:'高', score:76, action:'CCTV 精查+局部修复', desc:'主干雨水管变形，影响中部排水能力。'},
+ {id:'D06', pipeId:'p6', regionId:'jingta', x:545,y:407,type:'箱涵底部脱空', severity:'重大', score:95, action:'三维扫描+结构加固', desc:'箱涵结构性缺陷，应纳入近期工程项目。'},
+ {id:'D07', pipeId:'p6', regionId:'shennv', x:642,y:520,type:'腐蚀', severity:'中', score:55, action:'清洗防腐+巡查', desc:'管涵内壁腐蚀，建议中期处置。'},
+ {id:'D08', pipeId:'p8', regionId:'feifeng', x:796,y:318,type:'排口顶托', severity:'高', score:74, action:'排口高程复核+防倒灌', desc:'受江水位影响，可能导致片区排水不畅。'},
+ {id:'D09', pipeId:'p8', regionId:'juhe', x:884,y:405,type:'排口倒灌', severity:'高', score:72, action:'防倒灌闸门+汛前检查', desc:'滨江排口需复核与洪水位关系。'},
+ {id:'D10', pipeId:'p9', regionId:'ningjiang', x:700,y:185,type:'支管暗接', severity:'高', score:75, action:'混错接调查+封堵改造', desc:'可能与房屋沉降开裂点相关，需雷达探测。'},
+ {id:'D11', pipeId:'p1', regionId:'xiping', x:95,y:178,type:'淤积', severity:'中', score:58, action:'常态化清淤', desc:'坡地汇水支管淤积。'},
+ {id:'D12', pipeId:'p2', regionId:'chaoyun', x:268,y:206,type:'树根侵入', severity:'中', score:61, action:'清障+局部换管', desc:'老旧支管树根侵入。'},
+ {id:'D13', pipeId:'p2', regionId:'denglong', x:540,y:214,type:'节点井淤积', severity:'高', score:73, action:'节点井清淤+水力复核', desc:'主干雨水管关键节点。'},
+ {id:'D14', pipeId:'p3', regionId:'shengquan', x:760,y:500,type:'消防供水不足', severity:'中', score:64, action:'消火栓补点', desc:'室外消防水可达性需提升。'}
+];
+const relationTargets = [
+ {id:'R1', defect:'D01', d:'M286 331 C310 300,338 282,372 272'},
+ {id:'R2', defect:'D01', d:'M286 331 C315 365,355 392,395 410'},
+ {id:'R3', defect:'D06', d:'M545 407 C574 430,605 448,640 470'},
+ {id:'R4', defect:'D10', d:'M700 185 C730 170,755 168,790 188'},
+ {id:'R5', defect:'D02', d:'M185 270 C150 238,132 216,110 190'},
+ {id:'R6', defect:'D08', d:'M796 318 C825 340,855 370,890 410'}
+];
+let currentRegion = null, selectedPipe = null, selectedDefect = null, demoTimer = null;
+const severityColor = { '重大':'#ff4f5f','高':'#ffb34d','中':'#ffd166','低':'#8de374'};
+function $(id){return document.getElementById(id)}
+function init(){drawCards(); drawContours(); drawRegions(); drawPipes(); drawRelations(); drawDefects(); updatePanel(null);}
+function drawCards(){ $('cards').innerHTML = metrics.map(m=>`<div class="card"><div class="label">${m[0]}</div><div class="num">${m[1]}<span class="unit">${m[2]}</span></div></div>`).join(''); }
+function drawContours(){ const g=$('contours'); let html=''; for(let i=0;i<18;i++){ let y=40+i*32; let off=i%2?40:0; html+=`<path class="contour" d="M${-80+off} ${y} C 100 ${y-40}, 225 ${y+30}, 365 ${y-5} S 620 ${y-45}, 1080 ${y+20}"/>`; } g.innerHTML=html; }
+function drawRegions(){ const g=$('regions'), labels=$('labels'); g.innerHTML=regions.map(r=>`<polygon id="reg-${r.id}" data-id="${r.id}" class="region" points="${r.pts}" onclick="selectRegion('${r.id}')" onmousemove="showTip(event,'${r.id}')" onmouseleave="hideTip()"></polygon>`).join(''); labels.innerHTML += regions.map(r=>`<text id="label-${r.id}" class="regionLabel" x="${r.cx-20}" y="${r.cy+5}">${r.name}</text>`).join(''); }
+function drawPipes(){ const g=$('pipes'); g.innerHTML = pipes.map(p=>`<path id="pipe-${p.id}" data-id="${p.id}" class="pipe ${p.type}" d="${p.path}" onclick="selectPipe('${p.id}'); event.stopPropagation();" onmousemove="showPipeTip(event,'${p.id}')" onmouseleave="hideTip()"/>`+
+`<path class="pipe ${p.type} flowDash" d="${p.path}" style="opacity:.35;pointer-events:none"/>`).join('') +
+`<circle class="outlet" id="outlet-o1" cx="365" cy="520" r="6"/><circle class="outlet" id="outlet-o2" cx="610" cy="535" r="6"/><circle class="outlet" id="outlet-o3" cx="800" cy="520" r="6"/><circle class="outlet" id="outlet-o4" cx="890" cy="410" r="6"/>` +
+`<circle class="hotpoint" cx="372" cy="272" r="5"/><circle class="hotpoint" cx="395" cy="410" r="5"/><circle class="hotpoint" cx="640" cy="470" r="5"/><circle class="hotpoint" cx="790" cy="188" r="5"/>`;
+}
+function drawRelations(){ $('relations').innerHTML = relationTargets.map(r=>`<path id="rel-${r.id}" data-defect="${r.defect}" class="relation" d="${r.d}"/>`).join('') + `<circle id="buffer" class="buffer" cx="0" cy="0" r="55"/>`; }
+function drawDefects(){ $('defects').innerHTML = defects.map(d=>`<circle id="def-${d.id}" data-id="${d.id}" class="defect ${d.severity==='重大'?'major':''}" cx="${d.x}" cy="${d.y}" r="${d.severity==='重大'?7:5.5}" fill="${severityColor[d.severity]||'#ffd166'}" onclick="selectDefect('${d.id}'); event.stopPropagation();" onmousemove="showDefTip(event,'${d.id}')" onmouseleave="hideTip()"/>`).join(''); }
+function showTip(evt,id){const r=regions.find(x=>x.id===id); const t=$('tooltip'); t.innerHTML=`<b>${r.name}片区</b><br>综合风险：${r.riskScore}｜${r.riskLevel}<br>缺陷：${r.defects}处，重大：${r.major}处<br>${r.topRisk}`; t.style.left=(evt.clientX+14)+'px'; t.style.top=(evt.clientY+14)+'px'; t.style.display='block';}
+function showPipeTip(evt,id){const p=pipes.find(x=>x.id===id); const t=$('tooltip'); t.innerHTML=`<b>${p.name}</b><br>${p.typeName||pipeTypeName(p.type)}｜${p.diameter}<br>缺陷：${p.defects}处｜风险：${p.risk}<br>${p.action}`; t.style.left=(evt.clientX+14)+'px'; t.style.top=(evt.clientY+14)+'px'; t.style.display='block';}
+function showDefTip(evt,id){const d=defects.find(x=>x.id===id); const t=$('tooltip'); t.innerHTML=`<b>${d.id} ${d.type}</b><br>等级：${d.severity}｜评分：${d.score}<br>${d.desc}`; t.style.left=(evt.clientX+14)+'px'; t.style.top=(evt.clientY+14)+'px'; t.style.display='block';}
+function hideTip(){ $('tooltip').style.display='none';}
+function pipeTypeName(t){return ({storm:'雨水管', sewage:'污水管', combined:'混错接/合流管', culvert:'排洪箱涵'})[t]||t;}
+function selectRegion(id){ currentRegion = id; selectedPipe = null; selectedDefect = null; applyFocus(); updatePanel(regions.find(r=>r.id===id)); updateLinkage(regions.find(r=>r.id===id)); }
+function selectPipe(id){ selectedPipe=id; const p=pipes.find(x=>x.id===id); currentRegion = p.regions[0]; applyFocus(); document.querySelectorAll('.pipe').forEach(el=>el.classList.remove('highlight')); document.querySelectorAll(`#pipe-${id}`).forEach(el=>el.classList.add('highlight')); updatePipeDetails(p);}
+function selectDefect(id){ selectedDefect=id; const d=defects.find(x=>x.id===id); currentRegion = d.regionId; applyFocus(); document.querySelectorAll('.defect').forEach(el=>el.classList.remove('highlight')); const el=$('def-'+id); if(el)el.classList.add('highlight'); const b=$('buffer'); b.setAttribute('cx',d.x); b.setAttribute('cy',d.y); b.classList.add('show'); document.querySelectorAll('.relation').forEach(el=>el.classList.toggle('show', el.dataset.defect===id)); updateDefectDetails(d);}
+function applyFocus(){
+  const selected=currentRegion;
+  document.querySelectorAll('.region').forEach(el=>{let on=el.dataset.id===selected; el.classList.toggle('selected',on); el.classList.toggle('dimmed',!!selected&&!on);});
+  regions.forEach(r=>{let el=$('label-'+r.id); if(el){let on=r.id===selected; el.classList.toggle('selected',on); el.classList.toggle('dimmed',!!selected&&!on);}});
+  document.querySelectorAll('.pipe').forEach(el=>{
+    if(!el.id.startsWith('pipe-')) return;
+    const p=pipes.find(x=>x.id===el.dataset.id); const rel=!selected||p.regions.includes(selected);
+    el.classList.toggle('highlight',!!selected&&rel); el.classList.toggle('faded',!!selected&&!rel);
+  });
+  document.querySelectorAll('.flowDash').forEach(el=>{ el.style.opacity= selected ? '.18' : '.35'; });
+  document.querySelectorAll('.defect').forEach(el=>{const d=defects.find(x=>x.id===el.dataset.id); const rel=!selected||d.regionId===selected; el.classList.toggle('faded',!!selected&&!rel); if(rel&&selected) el.classList.add('highlight'); else if(!selected) el.classList.remove('highlight');});
+  document.querySelectorAll('.outlet').forEach(el=>el.classList.toggle('active',!!selected));
+  if(!selectedDefect){$('buffer').classList.remove('show'); document.querySelectorAll('.relation').forEach(el=>el.classList.toggle('show', selected && defects.find(d=>d.id===el.dataset.defect)?.regionId===selected));}
+}
+function resetView(){ currentRegion=null; selectedPipe=null; selectedDefect=null; clearInterval(demoTimer); demoTimer=null; document.querySelectorAll('.btn').forEach(b=>{if(b.textContent.includes('演示')) b.classList.remove('active')}); document.querySelectorAll('.selected,.dimmed,.highlight,.faded,.show').forEach(el=>{el.classList.remove('selected','dimmed','highlight','faded','show')}); updatePanel(null); $('linkageList').innerHTML='<li>全区视图：优先关注缺陷密集、临坡临江、人口暴露高的复合片区。</li><li>点击片区后自动提取上下游管网、排口、边坡与房屋影响关系。</li>';}
+function updatePanel(r){
+ if(!r){
+  $('regionTitle').textContent='全区综合态势'; $('regionSub').textContent='巫山县城迁建区｜点击片区进入风险画像'; $('riskBadge').textContent='综合研判';
+  $('infoGrid').innerHTML = `<div class="infoItem"><div class="k">总面积</div><div class="v">6.80<small>km²</small></div></div><div class="infoItem"><div class="k">人口密度</div><div class="v">2.25<small>万人/km²</small></div></div><div class="infoItem"><div class="k">管网缺陷</div><div class="v">147<small>处</small></div></div><div class="infoItem"><div class="k">箱涵/渠道</div><div class="v">12.98<small>km</small></div></div>`;
+  $('detailPanel').innerHTML = `<div class="section"><h3>全区风险识别逻辑</h3><div class="riskScore"><div class="gauge"><span class="score">84</span></div><div class="gaugeText"><b>复合风险链主导</b><br>管网破损、渗漏、排洪能力不足与边坡挡墙、房屋、消防可达性叠加，是迁建区除险降危需要统一上图、统一排序的核心。</div></div></div>${defectBars([{n:'破裂/渗漏',v:36},{n:'淤积/堵塞',v:31},{n:'变形/腐蚀',v:24},{n:'混错接/暗接',v:22},{n:'排口顶托',v:18},{n:'箱涵结构',v:16}])}<div class="section"><h3>片区优先级排序</h3>${priorityBars()}</div><div class="section"><h3>领导决策提示</h3><div class="decision">建议将“管网缺陷密集 + 临坡临江 + 房屋/消防暴露高”的片区作为近期优先治理对象，通过项目库实现资金、任务、责任、时序一体化管理。</div></div>`;
+  return;
+ }
+ $('regionTitle').textContent=`${r.name}片区风险画像`; $('regionSub').textContent=`${r.priority}｜${r.topRisk}`; $('riskBadge').textContent=`${r.riskLevel} · ${r.riskScore}分`;
+ $('infoGrid').innerHTML = `<div class="infoItem"><div class="k">面积</div><div class="v">${r.area}<small>km²</small></div></div><div class="infoItem"><div class="k">人口</div><div class="v">${r.pop}<small>万人</small></div></div><div class="infoItem"><div class="k">管网缺陷</div><div class="v">${r.defects}<small>处</small></div></div><div class="infoItem"><div class="k">重大缺陷</div><div class="v">${r.major}<small>处</small></div></div>`;
+ const stat = defectBreakdown(r);
+ $('detailPanel').innerHTML = `<div class="section"><h3>综合风险等级</h3><div class="riskScore"><div class="gauge"><span class="score">${r.riskScore}</span></div><div class="gaugeText"><b>${r.riskLevel}</b><br>${r.topRisk}<br>建议阶段：${r.priority}</div></div></div><div class="section"><h3>管网资产信息</h3><div class="infoGrid"><div class="infoItem"><div class="k">雨水管网</div><div class="v">${r.storm}<small>km</small></div></div><div class="infoItem"><div class="k">污水管网</div><div class="v">${r.sewage}<small>km</small></div></div><div class="infoItem"><div class="k">混错接管段</div><div class="v">${r.combined}<small>km</small></div></div><div class="infoItem"><div class="k">排洪箱涵</div><div class="v">${r.culvert}<small>km</small></div></div></div></div>${defectBars(stat)}<div class="section"><h3>风险雷达</h3><div class="radarWrap">${radarSvg(r.dims)}</div></div><div class="section"><h3>上下游关系</h3>${networkMini(r.name)}</div><div class="section"><h3>建议处置措施</h3><ul class="list"><li>${r.rec}</li><li>先完成 CCTV/QV 与雷达探测校核，再进行工程量与投资匡算。</li><li>与边坡挡墙、危房、消防通道打通项目同步打包。</li></ul></div><div class="section"><h3>领导决策提示</h3><div class="decision">${r.name}属于“${r.topRisk}”类型片区，建议纳入${r.priority}治理清单，并作为管网—边坡—房屋联动分析样板。</div></div>`;
+}
+function defectBreakdown(r){
+ const base=[['破裂',Math.round(r.defects*.18)],['渗漏',Math.round(r.defects*.22)],['淤积/堵塞',Math.round(r.defects*.20)],['变形',Math.round(r.defects*.12)],['混错接',Math.round(r.defects*.15)],['排口/箱涵',Math.max(1,Math.round(r.defects*.13))]];
+ return base.map(x=>({n:x[0],v:x[1]}));
+}
+function defectBars(items){ const max=Math.max(...items.map(i=>i.v)); return `<div class="section"><h3>缺陷类型构成</h3>${items.map(i=>`<div class="barRow"><span>${i.n}</span><div class="barTrack"><div class="barFill" style="width:${Math.max(8,i.v/max*100)}%"></div></div><b>${i.v}</b></div>`).join('')}</div>`; }
+function priorityBars(){ const top=[...regions].sort((a,b)=>b.riskScore-a.riskScore).slice(0,8); return top.map(r=>`<div class="barRow"><span>${r.name}</span><div class="barTrack"><div class="barFill" style="width:${r.riskScore}%"></div></div><b>${r.riskScore}</b></div>`).join('');}
+function radarSvg(vals){ const labels=['管网结构','排水能力','内涝','边坡影响','房屋影响','消防影响','居民暴露']; const cx=90,cy=86,R=70; const pts=vals.map((v,i)=>{let a=(-90+i*360/vals.length)*Math.PI/180;let r=R*v/100; return [cx+Math.cos(a)*r,cy+Math.sin(a)*r];}); const outer=labels.map((_,i)=>{let a=(-90+i*360/labels.length)*Math.PI/180;return [cx+Math.cos(a)*R,cy+Math.sin(a)*R];}); return `<svg width="190" height="178" viewBox="0 0 190 178"><polygon points="${outer.map(p=>p.join(',')).join(' ')}" fill="rgba(58,168,255,.06)" stroke="rgba(78,238,255,.35)"/><polygon points="${pts.map(p=>p.join(',')).join(' ')}" fill="rgba(255,209,102,.32)" stroke="#ffd166" stroke-width="2"/>${outer.map((p,i)=>`<line x1="${cx}" y1="${cy}" x2="${p[0]}" y2="${p[1]}" stroke="rgba(78,238,255,.16)"/>`).join('')}${outer.map((p,i)=>`<text x="${cx+(p[0]-cx)*1.17-18}" y="${cy+(p[1]-cy)*1.17+4}" fill="#a9c7d9" font-size="10">${labels[i]}</text>`).join('')}</svg>`;}
+function networkMini(name){ return `<div class="networkMini"><div class="node" style="left:18px;top:18px">上游汇水</div><div class="node" style="left:134px;top:58px">${name}</div><div class="node" style="right:18px;top:18px">下游排口</div><div class="node" style="right:58px;bottom:14px">边坡/房屋</div><div class="link" style="left:88px;top:43px;width:90px;transform:rotate(23deg)"></div><div class="link" style="left:202px;top:74px;width:118px;transform:rotate(-22deg)"></div><div class="link" style="left:202px;top:88px;width:102px;transform:rotate(18deg)"></div></div>`;}
+function updateLinkage(r){ $('linkageList').innerHTML=`<li>${r.name}：${r.topRisk}。</li><li>关联管段 ${pipes.filter(p=>p.regions.includes(r.id)).length} 条，缺陷点 ${defects.filter(d=>d.regionId===r.id).length} 个。</li><li>建议把管网修复与边坡挡墙、危房、消防通道项目打包推进。</li>`;}
+function updatePipeDetails(p){ $('regionTitle').textContent=`管段详情：${p.name}`; $('regionSub').textContent=`${pipeTypeName(p.type)}｜关联片区：${p.regions.map(id=>regions.find(r=>r.id===id)?.name).join('、')}`; $('riskBadge').textContent=`${p.risk}风险`; $('infoGrid').innerHTML=`<div class="infoItem"><div class="k">管径/断面</div><div class="v" style="font-size:15px">${p.diameter}</div></div><div class="infoItem"><div class="k">材质</div><div class="v" style="font-size:15px">${p.material}</div></div><div class="infoItem"><div class="k">长度</div><div class="v">${p.length}<small>km</small></div></div><div class="infoItem"><div class="k">缺陷</div><div class="v">${p.defects}<small>处</small></div></div>`; $('detailPanel').innerHTML=`<div class="section"><h3>管段风险链</h3><div class="decision">${pipeTypeName(p.type)}缺陷 → 排水不畅/渗漏 → 坡体滞水或排口顶托 → 挡墙/房屋/消防救援受影响。</div></div><div class="section"><h3>建议措施</h3><ul class="list"><li>${p.action}</li><li>联动上下游管段复核，避免“修一点、堵一片”。</li><li>与相关片区项目库同步建立投资优先级。</li></ul></div><div class="section"><h3>上下游关系</h3>${networkMini(p.name.substring(0,6))}</div>`;}
+function updateDefectDetails(d){ const r=regions.find(x=>x.id===d.regionId), p=pipes.find(x=>x.id===d.pipeId); $('regionTitle').textContent=`缺陷详情：${d.id} ${d.type}`; $('regionSub').textContent=`所属片区：${r.name}｜所属管段：${p.name}`; $('riskBadge').textContent=`${d.severity} · ${d.score}分`; $('infoGrid').innerHTML=`<div class="infoItem"><div class="k">缺陷类型</div><div class="v" style="font-size:17px">${d.type}</div></div><div class="infoItem"><div class="k">严重等级</div><div class="v" style="color:${severityColor[d.severity]}">${d.severity}</div></div><div class="infoItem"><div class="k">影响半径</div><div class="v">100<small>m示意</small></div></div><div class="infoItem"><div class="k">处置紧迫性</div><div class="v">${d.severity==='重大'?'立即':'近期'}</div></div>`; $('detailPanel').innerHTML=`<div class="section"><h3>缺陷描述</h3><div class="decision">${d.desc}</div></div><div class="section"><h3>建议处置</h3><ul class="list"><li>${d.action}</li><li>同步核查周边挡墙、房屋开裂、路面沉陷、消防可达性。</li><li>通过 CCTV/QV、雷达探测和现场查勘确定正式工程量。</li></ul></div><div class="section"><h3>风险链条</h3><div class="chain"><span>${d.type}</span><b>→</b><span>水文地质<br>恶化</span><b>→</b><span>工程/房屋<br>受影响</span><b>→</b><span>居民<br>暴露</span></div></div>`;}
+function toggleLayer(btn){btn.classList.toggle('active'); const layer=btn.dataset.layer; const show=btn.classList.contains('active'); if(layer==='defects'){document.querySelectorAll('.defect').forEach(e=>e.style.display=show?'':'none'); return;} document.querySelectorAll('.pipe.'+layer).forEach(e=>e.style.display=show?'':'none');}
+function startDemo(){ clearInterval(demoTimer); const seq=['jixian','songluan','qiyun','jingta','shangsheng']; let i=0; selectRegion(seq[i]); demoTimer=setInterval(()=>{i=(i+1)%seq.length; selectRegion(seq[i]);},2600); document.querySelectorAll('.btn').forEach(b=>{if(b.textContent.includes('演示')) b.classList.add('active')});}
+init();
+</script>
+</body>
+</html>

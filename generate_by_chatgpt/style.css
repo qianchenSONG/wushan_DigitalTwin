@@ -1,0 +1,404 @@
+/* =========================================================
+   巫山县城迁建区管网复合风险联动分析 —— 大屏视觉样式
+   色彩体系：深蓝科技底 + 青蓝数据色 + 金色重点 + 红色重大风险
+   ========================================================= */
+
+:root{
+  --bg-0:#050a14;
+  --bg-1:#081428;
+  --bg-2:#0b1b34;
+  --panel-glass: rgba(10, 22, 42, 0.66);
+  --panel-glass-strong: rgba(9, 19, 38, 0.86);
+  --border-soft: rgba(120, 170, 220, 0.16);
+  --border-strong: rgba(130, 190, 255, 0.32);
+
+  --cyan: #35d6f0;
+  --cyan-dim: #1f7a92;
+  --blue: #3a7bd5;
+  --gold: #e0b467;
+  --gold-strong:#f0c987;
+  --amber: #ffb545;
+  --red: #ff4b4f;
+  --red-strong:#ff2d3d;
+  --green: #4fd08a;
+
+  --text-0:#eaf3ff;
+  --text-1:#a9c0dd;
+  --text-2:#6f88a8;
+
+  --risk-low:#4fd08a;
+  --risk-mid:#ffd25c;
+  --risk-high:#ff9a3d;
+  --risk-critical:#ff4b4f;
+
+  --font-cjk: "Source Han Sans SC","Noto Sans SC","Microsoft YaHei","PingFang SC",
+              "Alibaba PuHuiTi","Segoe UI",sans-serif;
+}
+
+*{box-sizing:border-box;}
+html,body{
+  margin:0; padding:0; height:100%;
+  background:
+    radial-gradient(1200px 600px at 15% -10%, rgba(60,120,200,0.14), transparent 60%),
+    radial-gradient(1000px 700px at 100% 10%, rgba(224,180,103,0.06), transparent 55%),
+    var(--bg-0);
+  color:var(--text-0);
+  font-family: var(--font-cjk);
+  -webkit-font-smoothing:antialiased;
+}
+
+.hidden{ display:none !important; }
+
+/* ---------------- App shell (16:9 大屏栅格) ---------------- */
+.app{
+  min-height:100vh;
+  display:grid;
+  grid-template-rows: 66px auto 1fr 34px;
+  grid-template-areas:
+    "header"
+    "kpi"
+    "main"
+    "footer";
+}
+
+/* ---------------- Header ---------------- */
+.hdr{
+  grid-area:header;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:0 22px;
+  background:linear-gradient(180deg, rgba(13,26,48,0.95), rgba(8,17,32,0.85));
+  border-bottom:1px solid var(--border-soft);
+}
+.hdr-brand{ display:flex; align-items:center; gap:14px; }
+.hdr-mark{
+  width:38px;height:38px;border-radius:8px;
+  display:flex;align-items:center;justify-content:center;
+  font-weight:700; font-size:11px; letter-spacing:1px;
+  color:#08131f;
+  background:linear-gradient(135deg, var(--gold-strong), var(--cyan));
+  box-shadow:0 0 18px rgba(224,180,103,0.35);
+}
+.hdr-titles h1{
+  margin:0; font-size:19px; font-weight:700; letter-spacing:0.5px; color:var(--text-0);
+}
+.hdr-titles p{
+  margin:2px 0 0; font-size:11.5px; color:var(--text-1); letter-spacing:1px;
+}
+.hdr-actions{ display:flex; align-items:center; gap:10px; }
+.hdr-clock{
+  font-variant-numeric: tabular-nums;
+  font-size:12px; color:var(--text-2); min-width:150px; text-align:right;
+}
+
+.btn{
+  border:1px solid var(--border-strong);
+  background:rgba(30,60,100,0.35);
+  color:var(--text-0);
+  padding:7px 14px;
+  border-radius:6px;
+  font-size:12.5px;
+  cursor:pointer;
+  font-family:var(--font-cjk);
+  transition:all .15s ease;
+}
+.btn:hover{ background:rgba(53,214,240,0.16); border-color:var(--cyan); }
+.btn-sm{ padding:4px 10px; font-size:11.5px; }
+.btn-ghost{ background:rgba(255,255,255,0.03); }
+.btn-gold{
+  background:linear-gradient(135deg, rgba(224,180,103,0.28), rgba(224,180,103,0.08));
+  border-color: var(--gold);
+  color:var(--gold-strong);
+  font-weight:600;
+}
+.btn-gold:hover{ background:rgba(224,180,103,0.3); }
+
+.badge{
+  font-size:11px; padding:3px 9px; border-radius:20px;
+  border:1px solid var(--border-soft); color:var(--text-1);
+  background:rgba(255,255,255,0.04);
+}
+.badge-ghost{ color:var(--text-2); }
+
+/* ---------------- KPI 卡片行 ---------------- */
+.kpi-row{
+  grid-area:kpi;
+  display:grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap:10px;
+  padding:12px 16px;
+  background:linear-gradient(180deg, rgba(9,18,34,0.7), rgba(9,18,34,0.2));
+  border-bottom:1px solid var(--border-soft);
+}
+.kpi-card{
+  background:var(--panel-glass);
+  border:1px solid var(--border-soft);
+  border-radius:8px;
+  padding:10px 12px;
+  position:relative;
+  overflow:hidden;
+}
+.kpi-card::after{
+  content:"";
+  position:absolute; left:0; right:0; bottom:0; height:2px;
+  background:linear-gradient(90deg, var(--cyan), transparent);
+  opacity:.7;
+}
+.kpi-label{ font-size:11px; color:var(--text-1); letter-spacing:0.5px; }
+.kpi-value{
+  font-size:22px; font-weight:700; margin-top:4px; color:var(--text-0);
+  font-variant-numeric: tabular-nums;
+}
+.kpi-value small{ font-size:12px; color:var(--text-2); font-weight:400; margin-left:3px;}
+.kpi-value.gold{ color:var(--gold-strong); }
+.kpi-value.red{ color:var(--red); }
+
+/* ---------------- 主体三栏 ---------------- */
+.main-grid{
+  grid-area:main;
+  display:grid;
+  grid-template-columns: 232px 1fr 380px;
+  gap:10px;
+  padding:10px 16px 6px;
+  min-height:0;
+}
+
+.panel{
+  background:var(--panel-glass);
+  border:1px solid var(--border-soft);
+  border-radius:10px;
+  backdrop-filter: blur(6px);
+  overflow:hidden auto;
+  padding:14px;
+}
+.panel-title{
+  font-size:12.5px; font-weight:700; color:var(--cyan);
+  letter-spacing:1px; margin-bottom:10px;
+  padding-bottom:6px; border-bottom:1px solid var(--border-soft);
+}
+.panel-title-sm{ margin-top:16px; }
+
+/* 左侧图层面板 */
+.layer-panel{ display:flex; flex-direction:column; }
+.layer-list{ display:flex; flex-direction:column; gap:7px; }
+.layer-item{
+  display:flex; align-items:center; gap:8px;
+  font-size:12.5px; color:var(--text-1);
+  padding:5px 6px; border-radius:6px;
+  cursor:pointer;
+}
+.layer-item:hover{ background:rgba(53,214,240,0.06); color:var(--text-0); }
+.layer-item input{ accent-color:var(--cyan); }
+.layer-swatch{
+  width:12px;height:4px;border-radius:2px; flex:0 0 auto;
+}
+
+.region-list{ display:flex; flex-direction:column; gap:4px; max-height:230px; overflow:auto; }
+.region-item{
+  display:flex; align-items:center; justify-content:space-between;
+  font-size:12.5px; padding:6px 8px; border-radius:6px;
+  cursor:pointer; color:var(--text-1);
+  border:1px solid transparent;
+}
+.region-item:hover{ background:rgba(53,214,240,0.08); }
+.region-item.active{
+  background:rgba(224,180,103,0.14);
+  border-color: var(--gold);
+  color:var(--gold-strong);
+}
+.region-risk-tag{
+  font-size:10px; padding:1px 6px; border-radius:10px;
+  border:1px solid var(--border-soft);
+}
+.rt-一般风险{ color:var(--risk-low); border-color:var(--risk-low); }
+.rt-中风险{ color:var(--risk-mid); border-color:var(--risk-mid); }
+.rt-高风险{ color:var(--risk-high); border-color:var(--risk-high); }
+.rt-重大风险{ color:var(--risk-critical); border-color:var(--risk-critical); }
+
+.legend-block{ margin-top:auto; padding-top:14px; }
+.legend-row{ display:flex; align-items:center; gap:8px; font-size:12px; color:var(--text-1); margin-bottom:6px;}
+.dot{ width:9px;height:9px;border-radius:50%; display:inline-block; }
+.dot-low{ background:var(--risk-low); }
+.dot-mid{ background:var(--risk-mid); }
+.dot-high{ background:var(--risk-high); }
+.dot-critical{ background:var(--risk-critical); box-shadow:0 0 8px var(--risk-critical); }
+.pulse{ animation: pulse 1.6s ease-in-out infinite; }
+@keyframes pulse{
+  0%,100%{ transform:scale(1); opacity:1; }
+  50%{ transform:scale(1.5); opacity:.55; }
+}
+
+/* ---------------- 地图区 ---------------- */
+.map-wrap{ position:relative; border-radius:10px; overflow:hidden; border:1px solid var(--border-soft); }
+#map{ position:absolute; inset:0; background:#08111f; }
+
+.map-caption{
+  position:absolute; left:12px; bottom:10px; z-index:500;
+  font-size:11px; color:var(--text-1);
+  background:rgba(6,12,22,0.7); border:1px solid var(--border-soft);
+  padding:5px 10px; border-radius:6px; backdrop-filter: blur(4px);
+  max-width:70%;
+}
+
+.offline-banner{
+  position:absolute; top:12px; left:50%; transform:translateX(-50%); z-index:600;
+  background:rgba(255,75,79,0.16); border:1px solid var(--red);
+  color:#ffd7d8; font-size:12px; padding:6px 14px; border-radius:20px;
+}
+
+.demo-bar{
+  position:absolute; left:0; right:0; bottom:0; z-index:700;
+  display:flex; align-items:center; gap:16px;
+  padding:12px 18px;
+  background:linear-gradient(0deg, rgba(4,9,18,0.94), rgba(4,9,18,0.55));
+  border-top:1px solid var(--border-strong);
+}
+.demo-step{
+  font-size:11px; color:var(--gold-strong); border:1px solid var(--gold); border-radius:14px;
+  padding:3px 10px; white-space:nowrap;
+}
+.demo-text{ flex:1; font-size:13.5px; color:var(--text-0); }
+.demo-controls{ display:flex; gap:8px; }
+
+/* ---------------- 右侧信息面板 ---------------- */
+.info-panel{ display:flex; flex-direction:column; padding:0; }
+.info-empty{
+  flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center;
+  gap:8px; color:var(--text-2); font-size:12.5px; text-align:center; padding:30px;
+}
+.info-empty-icon{ font-size:30px; color:var(--cyan-dim); }
+
+.info-content{ padding:16px; display:flex; flex-direction:column; gap:12px; }
+
+.info-header{
+  display:flex; align-items:center; justify-content:space-between;
+  padding-bottom:10px; border-bottom:1px solid var(--border-soft);
+}
+.info-header-title{ font-size:15px; font-weight:700; color:var(--gold-strong); }
+.info-header-score{ text-align:right; }
+.score-num{ font-size:26px; font-weight:800; color:var(--cyan); font-variant-numeric: tabular-nums; }
+.score-label{ font-size:10.5px; color:var(--text-2); }
+
+.info-tabs{ display:flex; flex-wrap:wrap; gap:6px; }
+.info-tab{
+  font-size:11.5px; padding:5px 9px; border-radius:6px;
+  background:rgba(255,255,255,0.03); border:1px solid var(--border-soft);
+  color:var(--text-1); cursor:pointer; font-family:var(--font-cjk);
+}
+.info-tab.active{ background:rgba(53,214,240,0.16); border-color:var(--cyan); color:var(--text-0); }
+
+.info-tab-panes{ min-height:230px; }
+.tab-pane{ display:none; }
+.tab-pane.active{ display:block; }
+
+.kv-grid{ display:grid; grid-template-columns:1fr 1fr; gap:8px 12px; }
+.kv-item{
+  background:rgba(255,255,255,0.03); border:1px solid var(--border-soft);
+  border-radius:6px; padding:7px 9px;
+}
+.kv-k{ font-size:10.5px; color:var(--text-2); }
+.kv-v{ font-size:13px; color:var(--text-0); margin-top:2px; font-weight:600; }
+
+.chart-box{ width:100%; height:220px; }
+.chart-box-sm{ height:150px; margin-top:8px; }
+
+.flow-diagram{
+  display:flex; align-items:center; justify-content:space-between;
+  gap:4px; padding:10px 2px; flex-wrap:wrap;
+}
+.flow-node{
+  flex:1 1 auto; min-width:78px; text-align:center;
+  background:rgba(53,214,240,0.08); border:1px solid var(--border-soft);
+  border-radius:8px; padding:8px 6px; font-size:11px; color:var(--text-0);
+}
+.flow-node.hot{ border-color:var(--red); background:rgba(255,75,79,0.12); color:#ffd7d8; }
+.flow-arrow{ color:var(--cyan); font-size:16px; flex:0 0 auto; }
+.flow-notes{ font-size:11.5px; color:var(--text-1); line-height:1.7; margin-top:8px; }
+.flow-notes b{ color:var(--gold-strong); }
+
+.action-list{ margin:0; padding-left:18px; display:flex; flex-direction:column; gap:6px; }
+.action-list li{ font-size:12.5px; color:var(--text-0); }
+.action-list li span{ color:var(--text-2); font-size:11px; }
+
+.decision-box{
+  margin-top:auto;
+  display:flex; gap:10px; align-items:flex-start;
+  background:linear-gradient(90deg, rgba(224,180,103,0.14), rgba(224,180,103,0.02));
+  border:1px solid var(--gold); border-radius:8px; padding:10px 12px;
+}
+.decision-icon{ color:var(--gold-strong); font-size:16px; }
+.decision-text{ font-size:12.5px; color:var(--gold-strong); line-height:1.6; }
+
+.chain-diagram{ display:flex; flex-wrap:wrap; align-items:center; gap:6px; margin-top:6px; }
+.chain-node{
+  font-size:11px; padding:6px 9px; border-radius:6px;
+  background:rgba(255,255,255,0.04); border:1px solid var(--border-soft); color:var(--text-0);
+}
+.chain-node.tail{ border-color:var(--red); color:#ffd7d8; background:rgba(255,75,79,0.1); }
+.chain-arrow{ color:var(--cyan); }
+
+.photo-placeholder{
+  height:110px; border-radius:8px; border:1px dashed var(--border-strong);
+  display:flex; align-items:center; justify-content:center;
+  color:var(--text-2); font-size:11.5px; background:rgba(255,255,255,0.02);
+}
+
+/* ---------------- footer ---------------- */
+.ftr{
+  grid-area:footer;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:0 18px; font-size:10.5px; color:var(--text-2);
+  border-top:1px solid var(--border-soft);
+  background:rgba(6,12,22,0.75);
+}
+
+/* ---------------- Leaflet 自定义主题覆盖 ---------------- */
+.leaflet-container{ background:#08111f; font-family:var(--font-cjk); }
+.leaflet-control-attribution{
+  background:rgba(6,12,22,0.6) !important; color:var(--text-2) !important; font-size:10px !important;
+}
+.leaflet-control-attribution a{ color:var(--text-1) !important; }
+.leaflet-tooltip.wushan-tooltip{
+  background:rgba(8,17,32,0.92); color:var(--text-0);
+  border:1px solid var(--border-strong); border-radius:8px;
+  font-family:var(--font-cjk); font-size:12px; padding:8px 10px;
+  box-shadow:0 6px 20px rgba(0,0,0,0.4);
+}
+.leaflet-tooltip.wushan-tooltip::before{ display:none; }
+
+.map-offline-fallback{
+  position:absolute; inset:0;
+  background:
+    linear-gradient(rgba(53,214,240,0.05) 1px, transparent 1px) 0 0/34px 34px,
+    linear-gradient(90deg, rgba(53,214,240,0.05) 1px, transparent 1px) 0 0/34px 34px,
+    radial-gradient(700px 400px at 45% 40%, rgba(58,123,213,0.18), transparent 65%),
+    #08111f;
+}
+
+/* ---------------- 地图自定义点标记 ---------------- */
+.mk{
+  width:16px;height:16px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:10px; line-height:1; color:#08111f; font-weight:700;
+  box-shadow:0 0 6px rgba(0,0,0,0.5);
+}
+.mk-building{ background:var(--red); }
+.mk-fire{ background:var(--red-strong); clip-path: polygon(50% 0%, 0% 100%, 100% 100%); border-radius:2px; }
+.mk-water{ background:var(--waterlog,#35a7f0); font-size:9px; }
+
+path.defect-critical-pulse{
+  animation: defectPulse 1.4s ease-in-out infinite;
+}
+@keyframes defectPulse{
+  0%,100%{ filter:none; }
+  50%{ filter:drop-shadow(0 0 6px #ff4b4f); }
+}
+
+/* ---------------- 响应式（缩放适配大屏 / 常规屏） ---------------- */
+@media (max-width: 1400px){
+  .kpi-row{ grid-template-columns: repeat(4, 1fr); }
+  .main-grid{ grid-template-columns: 210px 1fr 340px; }
+}
+@media (max-width: 1000px){
+  .main-grid{ grid-template-columns: 1fr; grid-auto-rows:minmax(260px,auto); }
+  .kpi-row{ grid-template-columns: repeat(2, 1fr); }
+}

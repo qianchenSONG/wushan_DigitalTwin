@@ -1,0 +1,48 @@
+{
+  "source": "D:\\Desktop\\巫山\\可视化\\原始数据\\供水管线图（2025年测）.geojson",
+  "coordinate_system": "GeoJSON声明为EPSG:4490；按经纬度直接叠加，和WGS84底图在本项目精度范围内匹配。",
+  "bounds": [
+    [
+      31.06275674,
+      109.82819011
+    ],
+    [
+      31.11123081,
+      109.89511595
+    ]
+  ],
+  "record_count": 20498,
+  "pipe_segment_count": 20257,
+  "node_count": 12544,
+  "total_length_m": 135220.6,
+  "total_length_km": 135.22,
+  "material_counts": {
+    "未识别": 20257
+  },
+  "diameter_counts": {
+    "未识别": 20257
+  },
+  "material_lengths_km": {
+    "未识别": 135.22
+  },
+  "research_context": {
+    "area_km2": 6.8,
+    "population_10k": 15.3,
+    "risk_note": "迁建区存在地质、防护工程、房屋、供排水、消防等多因素叠加风险；地下管网渗漏是放大地质安全风险的重要因素之一。",
+    "communities": [
+      "朝云",
+      "翠屏",
+      "登龙",
+      "飞凤",
+      "集仙",
+      "净坛",
+      "起云",
+      "上升",
+      "神女",
+      "圣泉",
+      "松峦",
+      "宁江",
+      "聚鹤"
+    ]
+  }
+}
