@@ -4,6 +4,7 @@ export class MapSystem {
     this.onLayerChange = onLayerChange;
     this.topicLayers = new Map();
     this.initialViewOffset = { x: 0, y: 0 };
+    this.localBasemapBounds = L.latLngBounds([[31.027048, 109.80011], [31.125848, 109.940186]]);
     this.state = {
       waterVisible: false,
       basemap: "street"
@@ -16,9 +17,13 @@ export class MapSystem {
       maxZoom: 19,
       attribution: "© OpenStreetMap"
     });
-    this.satelliteLayer = L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}", {
+    this.satelliteLayer = L.tileLayer("./data/basemaps/ditu17/{z}/{x}/{y}.png?v=ditu17-tpk-20260721", {
+      minZoom: 0,
+      maxNativeZoom: 17,
       maxZoom: 19,
-      attribution: "Tiles © Esri"
+      bounds: this.localBasemapBounds,
+      noWrap: true,
+      attribution: "奥维导出底图"
     });
     this.streetLayer.addTo(this.map);
     this.map.createPane("firePane");
@@ -40,6 +45,8 @@ export class MapSystem {
 
     this.nodeLayer = null;
     this.map.fitBounds(this.initialBounds.pad(0.12));
+    this.map.setMaxBounds(this.localBasemapBounds.pad(0.18));
+    this.map.options.maxBoundsViscosity = 0.86;
     this.map.panBy([this.initialViewOffset.x, this.initialViewOffset.y], { animate: false });
     this.onStatus?.("系统已就绪，可在左侧选择需要显示的图层。");
   }
@@ -284,7 +291,7 @@ export class MapSystem {
       this.streetLayer.remove();
       this.satelliteLayer.addTo(this.map);
       this.state.basemap = "satellite";
-      return "底图：卫星";
+      return "底图：奥维";
     }
     this.satelliteLayer.remove();
     this.streetLayer.addTo(this.map);

@@ -10,3 +10,8 @@ build/
 *.log
 *.tmp
 *.temp
+
+# Local basemap assets generated from Ovital/ArcGIS TPK packages.
+# Keep the extraction scripts in Git, but keep large imagery data outside Git.
+原始数据/*.tpk
+可视化V1/data/basemaps/

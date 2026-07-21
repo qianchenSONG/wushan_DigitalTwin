@@ -33,7 +33,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0001",
         "name": "张村雨",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -73,7 +73,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0002",
         "name": "西坪村4社曹先明",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -117,7 +117,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0003",
         "name": "西坪村4社梁后典",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -157,7 +157,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0004",
         "name": "西坪村4社向存东",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -197,7 +197,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0005",
         "name": "西坪村4社向勇",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -237,7 +237,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0006",
         "name": "西坪村4社张村昌",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -277,7 +277,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0007",
         "name": "西坪村4社张以金",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -317,7 +317,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0008",
         "name": "西坪村4社向宗华",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -357,7 +357,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0009",
         "name": "西坪村7社陈刚",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -397,7 +397,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0010",
         "name": "西坪村7社何伟",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -437,7 +437,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0011",
         "name": "西坪村7社杨永权",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -477,7 +477,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0012",
         "name": "西坪村7社张存勇",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -517,7 +517,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0013",
         "name": "张典英张典兴",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -569,7 +569,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0014",
         "name": "王祖珍",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -609,7 +609,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0015",
         "name": "田发银",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -685,7 +685,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0016",
         "name": "田发德",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -725,7 +725,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0017",
         "name": "田吉庆-2",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -765,7 +765,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0018",
         "name": "田吉伟-2",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -805,7 +805,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0019",
         "name": "田光美-1",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -845,7 +845,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0020",
         "name": "田发元-2",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -885,7 +885,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0021",
         "name": "田发友-2",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -925,7 +925,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0022",
         "name": "田吉春-2",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -965,7 +965,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0023",
         "name": "田雪梅-2",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -1005,7 +1005,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0024",
         "name": "田光兵-6",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -1045,7 +1045,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0025",
         "name": "陈鹏宇",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -1085,7 +1085,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0026",
         "name": "黄云",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -1125,7 +1125,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0027",
         "name": "张存海-2",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -1165,7 +1165,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0028",
         "name": "宁鹤街130号",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -1205,7 +1205,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0029",
         "name": "宁鹤街516号",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -1245,7 +1245,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0030",
         "name": "聚鹤街384号",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -1293,7 +1293,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0031",
         "name": "聚鹤街388号",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -1341,7 +1341,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0032",
         "name": "聚鹤街425号",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -1385,7 +1385,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0033",
         "name": "净坛一路528号",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -1425,7 +1425,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0034",
         "name": "望霞路308-320号",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -1465,7 +1465,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0035",
         "name": "望霞路290-306号",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -1505,7 +1505,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0036",
         "name": "望霞路278-288号",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -1545,7 +1545,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0037",
         "name": "望霞路111号",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -1585,7 +1585,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0038",
         "name": "望霞路91号",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -1697,7 +1697,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0039",
         "name": "广东西路60号",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -1737,7 +1737,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0040",
         "name": "广东西路17号",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -1821,7 +1821,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0041",
         "name": "广东西路120号",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -1861,7 +1861,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0042",
         "name": "文体广场6栋",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -1901,7 +1901,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0043",
         "name": "巫峡路619号1栋",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -1949,7 +1949,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0044",
         "name": "巫峡路621号1号楼",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -1989,7 +1989,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0045",
         "name": "巫峡路621号26栋",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -2029,7 +2029,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0046",
         "name": "巫峡路621号26栋下",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -2069,7 +2069,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0047",
         "name": "净坛一路80号6单元（挡墙和地坪开裂）",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -2109,7 +2109,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0048",
         "name": "巫峡路4号1幢(墙体开裂)",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -2149,7 +2149,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0049",
         "name": "净坛二路289号8幢(挡墙开裂)",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -2189,7 +2189,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0050",
         "name": "净坛二路289号9幢（挡墙开裂）",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -2229,7 +2229,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0051",
         "name": "巫峡路32号附1号2幢一单元、二单元、三单元(墙体开裂)",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -2269,7 +2269,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0052",
         "name": "巫峡路48号2幢(混凝土缺损、钢筋锈蚀)",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -2309,7 +2309,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0053",
         "name": "净坛二路450号2幢一单元、二单元、三单元（地坪开裂、变形）",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -2349,7 +2349,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0054",
         "name": "净坛二路222~228号(连接构造)",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -2389,7 +2389,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0055",
         "name": "净坛二路277~285号1栋（柱梁节点连接不当、挡墙开裂）",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -2429,7 +2429,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0056",
         "name": "净坛二路252号1幢~258号1幢(地坪开裂、变形等)",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -2473,7 +2473,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0057",
         "name": "净坛二路284号1幢(墙体开裂)",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -2513,7 +2513,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0058",
         "name": "净坛二路18号（墙体开裂）",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -2561,7 +2561,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0059",
         "name": "翠屏街200号3幢一单元、二单元(墙体开裂，基础)",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -2601,7 +2601,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0060",
         "name": "翠屏街200号2幢一单元、二单元、三单元(墙体开裂，基础)",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -2641,7 +2641,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0061",
         "name": "翠屏街200号1幢一单元、二单元(墙体开裂)",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -2685,7 +2685,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0062",
         "name": "翠屏街181号1幢一单元、二单元（基础）",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -2745,7 +2745,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0063",
         "name": "翠屏街235号1幢四单元",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -2785,7 +2785,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0064",
         "name": "平湖西路612（墙体开裂)",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -2825,7 +2825,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0065",
         "name": "平湖西路606号",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -2865,7 +2865,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0066",
         "name": "平湖西路608号（墙体开裂）",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -2905,7 +2905,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0067",
         "name": "平湖西路610号（墙体开裂）",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -2945,7 +2945,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0068",
         "name": "高唐街33号1单元(墙体开裂)",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -2985,7 +2985,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0069",
         "name": "高唐街48号 -3场地",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -3025,7 +3025,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0070",
         "name": "广东中路211号A栋（基础沉降）",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -3065,7 +3065,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0071",
         "name": "平湖西路85号(墙体开裂)",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -3113,7 +3113,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0072",
         "name": "平湖西路312-1幢（墙体开裂）",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -3153,7 +3153,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0073",
         "name": "平湖西路251-1幢(墙体开裂)",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -3197,7 +3197,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0074",
         "name": "净坛一路349号9幢 1单元、2单元（地面沉降、挡墙开裂）",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",
@@ -3237,7 +3237,7 @@
       "properties": {
         "id": "relocation-safety-severe-houses-A0075",
         "name": "祥云路324号（墙体开裂）",
-        "source": "迁建区安全隐患分级.ovkml",
+        "source": "迁建区安全隐患分级.geojson",
         "kind": "building-safety-risk",
         "folder": "存在有严重安全隐患的房子",
         "risk_level": "严重安全隐患",

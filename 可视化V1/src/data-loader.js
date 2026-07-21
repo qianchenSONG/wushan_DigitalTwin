@@ -1,5 +1,5 @@
 const loadedScripts = new Map();
-const DATA_VERSION = "building-original-20260721c";
+const DATA_VERSION = "building-geojson-20260721";
 
 export function loadScript(src) {
   if (loadedScripts.has(src)) {
