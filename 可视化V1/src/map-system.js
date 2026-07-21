@@ -15,16 +15,22 @@ export class MapSystem {
     this.map = L.map("map", { preferCanvas: true, zoomControl: true });
     this.streetLayer = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
       maxZoom: 19,
+      keepBuffer: 4,
+      updateWhenIdle: false,
       attribution: "© OpenStreetMap"
     });
     this.satelliteLayer = L.tileLayer("./data/basemaps/ditu17/{z}/{x}/{y}.png?v=ditu17-tpk-20260721", {
       minZoom: 0,
       maxNativeZoom: 17,
       maxZoom: 19,
+      keepBuffer: 4,
+      updateWhenIdle: false,
       bounds: this.localBasemapBounds,
       noWrap: true,
       attribution: "奥维导出底图"
     });
+    this.enableTileRetry(this.streetLayer);
+    this.enableTileRetry(this.satelliteLayer);
     this.streetLayer.addTo(this.map);
     this.map.createPane("firePane");
     this.map.getPane("firePane").style.zIndex = 430;
@@ -54,6 +60,29 @@ export class MapSystem {
   findInitialBounds() {
     const drainageLayer = window.LAYER_CATALOG?.find((layer) => layer.id === "drainage-defects-geojson-lines");
     return drainageLayer?.bounds ? L.latLngBounds(drainageLayer.bounds) : null;
+  }
+
+  enableTileRetry(layer, { maxRetries = 3, delayMs = 450 } = {}) {
+    layer.on("tileerror", (event) => {
+      const tile = event.tile;
+      const coords = event.coords;
+      if (!tile || !coords) return;
+
+      const retryCount = Number(tile.dataset.retryCount || 0);
+      if (retryCount >= maxRetries) return;
+      tile.dataset.retryCount = String(retryCount + 1);
+
+      window.setTimeout(() => {
+        if (!tile.isConnected) return;
+        const url = layer.getTileUrl(coords);
+        const separator = url.includes("?") ? "&" : "?";
+        tile.src = `${url}${separator}retry=${Date.now()}-${retryCount + 1}`;
+      }, delayMs * (retryCount + 1));
+    });
+
+    layer.on("tileload", (event) => {
+      if (event.tile?.dataset) delete event.tile.dataset.retryCount;
+    });
   }
 
   pipeStyle(highlight = false) {
