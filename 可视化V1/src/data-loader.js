@@ -1,4 +1,5 @@
 const loadedScripts = new Map();
+const DATA_VERSION = "building-original-20260721c";
 
 export function loadScript(src) {
   if (loadedScripts.has(src)) {
@@ -26,8 +27,8 @@ export async function loadTopicLayer(layer) {
   const lineVar = layerVarName(lineLayerId, "lines");
   const empty = { type: "FeatureCollection", features: [] };
   await Promise.all([
-    layer.hasPoints === false || window[pointVar] ? Promise.resolve() : loadScript(`./data/layers/${pointLayerId}.points.js`),
-    layer.hasLines === false || window[lineVar] ? Promise.resolve() : loadScript(`./data/layers/${lineLayerId}.lines.js`)
+    layer.hasPoints === false || window[pointVar] ? Promise.resolve() : loadScript(`./data/layers/${pointLayerId}.points.js?v=${DATA_VERSION}`),
+    layer.hasLines === false || window[lineVar] ? Promise.resolve() : loadScript(`./data/layers/${lineLayerId}.lines.js?v=${DATA_VERSION}`)
   ]);
   return {
     points: layer.hasPoints === false ? empty : window[pointVar],

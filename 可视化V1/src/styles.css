@@ -210,7 +210,44 @@ input[type="checkbox"] {
 .topic-layer-list,
 .data-list {
   display: grid;
+  gap: 12px;
+}
+
+.layer-section {
+  padding-top: 2px;
+}
+
+.layer-section-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   gap: 10px;
+  margin: 2px 0 8px;
+  padding: 0 2px;
+}
+
+.layer-section-title h3 {
+  margin: 0;
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.layer-section-empty {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.layer-section-body {
+  display: grid;
+  gap: 8px;
+}
+
+.layer-section-empty {
+  padding: 8px 10px;
+  border: 1px dashed rgba(255, 255, 255, 0.12);
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.025);
 }
 
 .topic-card {
@@ -218,7 +255,7 @@ input[type="checkbox"] {
 }
 
 .layer-card {
-  margin-bottom: 10px;
+  margin-bottom: 0;
 }
 
 .topic-card h3,

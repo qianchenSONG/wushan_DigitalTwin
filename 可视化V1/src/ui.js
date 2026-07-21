@@ -1,5 +1,7 @@
 import { loadTopicLayer } from "./data-loader.js";
 
+const LAYER_SECTIONS = ["地质", "防护工程", "房屋建筑", "管网", "消防"];
+
 export class SystemUi {
   constructor(mapSystem) {
     this.mapSystem = mapSystem;
@@ -13,17 +15,15 @@ export class SystemUi {
   init() {
     this.renderMetrics();
     this.renderTabs();
-    this.renderWaterDetails();
     this.renderTopicLayers();
+    this.renderWaterDetails();
     this.renderLegend();
     this.bindBasics();
-    this.updateStatus("系统已就绪：供水管线为主图层，专题图层可在左侧打开。");
+    this.updateStatus("系统已就绪：可在左侧选择需要显示的图层。");
   }
 
   renderMetrics() {
-    document.getElementById("metricPipeLength").textContent = `${window.SUMMARY.total_length_km.toFixed(2)} km`;
-    document.getElementById("metricPipeSegments").textContent = window.SUMMARY.pipe_segment_count.toLocaleString();
-    document.getElementById("metricPipeNodes").textContent = window.SUMMARY.node_count.toLocaleString();
+    document.getElementById("metricSectionCount").textContent = LAYER_SECTIONS.length;
     document.getElementById("metricLayerCount").textContent = this.catalog.length + 1;
   }
 
@@ -41,7 +41,6 @@ export class SystemUi {
       this.mapSystem.setWaterVisible(event.target.checked);
       this.renderLegend();
     });
-    document.getElementById("toggleWaterNodes").addEventListener("change", (event) => this.mapSystem.setWaterNodesVisible(event.target.checked));
     document.getElementById("clearTopicLayers").addEventListener("click", () => this.clearTopicLayers());
     document.getElementById("fitPipes").addEventListener("click", () => this.mapSystem.fitPipes());
     document.getElementById("fitAll").addEventListener("click", () => this.mapSystem.fitAllVisible());
@@ -51,47 +50,139 @@ export class SystemUi {
   }
 
   renderWaterDetails() {
-    document.getElementById("waterLayerMeta").textContent = `${window.SUMMARY.pipe_segment_count.toLocaleString()} 段线 · ${window.SUMMARY.node_count.toLocaleString()} 个节点 · ${window.SUMMARY.total_length_km.toFixed(2)} km`;
     document.getElementById("waterLayerDetails").innerHTML = `
-      <dt>来源</dt><dd>供水管线图（2025年测）.geojson</dd>
-      <dt>坐标</dt><dd>EPSG:4490，经纬度直叠</dd>
-      <dt>线对象</dt><dd>${window.SUMMARY.pipe_segment_count.toLocaleString()} 段</dd>
-      <dt>节点</dt><dd>${window.SUMMARY.node_count.toLocaleString()} 个</dd>
-      <dt>长度</dt><dd>${window.SUMMARY.total_length_km.toFixed(2)} km</dd>
+      <dt>来源</dt><dd>供水管线图（2025年测）.ovkml</dd>
+      <dt>筛选</dt><dd>JSL 文件夹</dd>
+      <dt>总长度</dt><dd>${window.SUMMARY.total_length_km.toFixed(2)} km</dd>
+      <dt>坐标</dt><dd>CGCS2000，经纬度直叠</dd>
     `;
+  }
+
+  formatLayerMeta(layer) {
+    if (layer.id === "drainage-defects-geojson-lines" && Number.isFinite(layer.lengthKm)) {
+      return `总长度 ${layer.lengthKm.toFixed(2)} km`;
+    }
+    if (layer.id === "drainage-defects-geojson-points" && Number.isFinite(layer.pointCount)) {
+      return `缺陷点 ${layer.pointCount.toLocaleString()} 个`;
+    }
+    if ((layer.category === "房屋建筑" || layer.id === "community-fire-risk") && Number.isFinite(layer.polygonCount)) {
+      return `块数量 ${layer.polygonCount.toLocaleString()} 个`;
+    }
+    return layer.file || "";
+  }
+
+  renderLayerDetails(layer) {
+    const filterRows = layer.sourceFolders?.length ? `<dt>筛选</dt><dd>${layer.sourceFolders.join("、")}</dd>` : "";
+    const metricRows = this.renderLayerMetricRows(layer);
+    return `
+      <dt>来源</dt><dd>${layer.file}</dd>
+      <dt>说明</dt><dd>${layer.description || "标准专题图层"}</dd>
+      ${metricRows}
+      ${filterRows}
+    `;
+  }
+
+  renderLayerMetricRows(layer) {
+    if (layer.id === "drainage-defects-geojson-lines" && Number.isFinite(layer.lengthKm)) {
+      return `<dt>总长度</dt><dd>${layer.lengthKm.toFixed(2)} km</dd>`;
+    }
+    if (layer.id === "drainage-defects-geojson-points" && Number.isFinite(layer.pointCount)) {
+      return `<dt>缺陷点</dt><dd>${layer.pointCount.toLocaleString()} 个</dd>`;
+    }
+    if ((layer.category === "房屋建筑" || layer.id === "community-fire-risk") && Number.isFinite(layer.polygonCount)) {
+      return `<dt>块数量</dt><dd>${layer.polygonCount.toLocaleString()} 个</dd>`;
+    }
+    return "";
+  }
+
+  categoryForLayer(layer) {
+    if (layer.category) return layer.category;
+    if (layer.kind?.includes("drainage") || layer.id?.includes("water")) return "管网";
+    if (layer.kind?.includes("building")) return "房屋建筑";
+    return "管网";
+  }
+
+  renderWaterLayerCard() {
+    const card = document.createElement("article");
+    card.className = "topic-card layer-card";
+    card.id = "waterLayerCard";
+    card.innerHTML = `
+      <label class="topic-main">
+        <input type="checkbox" id="toggleWater">
+        <span>
+          <h3>供水管线图</h3>
+          <div class="topic-meta">总长度 ${window.SUMMARY.total_length_km.toFixed(2)} km</div>
+        </span>
+      </label>
+      <div class="topic-tools">
+        <button id="fitPipes">定位</button>
+      </div>
+      <details class="layer-details">
+        <summary>数据概况</summary>
+        <dl id="waterLayerDetails"></dl>
+      </details>
+    `;
+    return card;
+  }
+
+  renderTopicLayerCard(layer) {
+    const card = document.createElement("article");
+    card.className = "topic-card layer-card";
+    card.dataset.layerId = layer.id;
+    card.innerHTML = `
+      <label class="topic-main">
+        <input type="checkbox" ${layer.enabled ? "checked" : ""} data-layer-toggle="${layer.id}">
+        <span>
+          <h3>${layer.title}</h3>
+          <div class="topic-meta">${this.formatLayerMeta(layer)}</div>
+        </span>
+      </label>
+      <div class="topic-tools">
+        <button data-layer-fit="${layer.id}">定位</button>
+      </div>
+      <details class="layer-details">
+        <summary>数据概况</summary>
+        <dl>${this.renderLayerDetails(layer)}</dl>
+      </details>
+    `;
+    return card;
   }
 
   renderTopicLayers() {
     const list = document.getElementById("topicLayerList");
     list.innerHTML = "";
-    this.catalog.forEach((layer) => {
-      const card = document.createElement("article");
-      card.className = "topic-card layer-card";
-      card.dataset.layerId = layer.id;
-      card.innerHTML = `
-        <label class="topic-main">
-          <input type="checkbox" ${layer.enabled ? "checked" : ""} data-layer-toggle="${layer.id}">
-          <span>
-            <h3>${layer.title}</h3>
-            <div class="topic-meta">${layer.lineCount.toLocaleString()} 段线 · ${layer.pointCount.toLocaleString()} 个点 · ${layer.lengthKm.toFixed(2)} km</div>
-          </span>
-        </label>
-        <div class="topic-tools">
-          <button data-layer-fit="${layer.id}">定位</button>
+    const sections = new Map();
+    LAYER_SECTIONS.forEach((sectionName) => {
+      const section = document.createElement("section");
+      section.className = "layer-section";
+      section.dataset.layerSection = sectionName;
+      section.innerHTML = `
+        <div class="layer-section-title">
+          <h3>${sectionName}</h3>
         </div>
-        <details class="layer-details">
-          <summary>数据概况</summary>
-          <dl>
-            <dt>来源</dt><dd>${layer.file}</dd>
-            <dt>说明</dt><dd>${layer.description || "标准专题图层"}</dd>
-            <dt>原始要素</dt><dd>${layer.recordCount.toLocaleString()} 条</dd>
-            <dt>线对象</dt><dd>${layer.lineCount.toLocaleString()} 段</dd>
-            <dt>点对象</dt><dd>${layer.pointCount.toLocaleString()} 个</dd>
-            <dt>长度</dt><dd>${layer.lengthKm.toFixed(2)} km</dd>
-          </dl>
-        </details>
+        <div class="layer-section-body"></div>
       `;
-      list.appendChild(card);
+      list.appendChild(section);
+      sections.set(sectionName, section);
+    });
+
+    const appendToSection = (sectionName, card) => {
+      const section = sections.get(sectionName);
+      const body = section.querySelector(".layer-section-body");
+      body.appendChild(card);
+    };
+
+    appendToSection("管网", this.renderWaterLayerCard());
+
+    this.catalog.forEach((layer) => {
+      appendToSection(this.categoryForLayer(layer), this.renderTopicLayerCard(layer));
+    });
+
+    sections.forEach((section) => {
+      const body = section.querySelector(".layer-section-body");
+      if (!body.children.length) {
+        body.innerHTML = `<div class="layer-section-empty">暂无图层</div>`;
+      }
     });
 
     list.addEventListener("change", async (event) => {
@@ -155,8 +246,22 @@ export class SystemUi {
   renderLegend() {
     const legend = document.getElementById("mapLegend");
     const rows = [];
-    if (this.mapSystem.state.waterVisible) rows.push(["供水管线图", "#00e5ff"]);
-    rows.push(...[...this.topicState.values()].filter((entry) => entry.visible).map((entry) => [entry.config.title, entry.config.color]));
+    if (this.mapSystem.state.waterVisible) rows.push(["管网-供水管线图", "#00e5ff"]);
+    [...this.topicState.values()].filter((entry) => entry.visible).forEach((entry) => {
+      const category = this.categoryForLayer(entry.config);
+      if (entry.config.severityColors) {
+        rows.push([`${category}-1级缺陷`, entry.config.severityColors["1"]]);
+        rows.push([`${category}-2级缺陷`, entry.config.severityColors["2"]]);
+        rows.push([`${category}-3级缺陷`, entry.config.severityColors["3"]]);
+        rows.push([`${category}-4级缺陷（严重）`, entry.config.severityColors["4"]]);
+        return;
+      }
+      if (entry.config.riskColors) {
+        Object.entries(entry.config.riskColors).forEach(([name, color]) => rows.push([`${category}-${name}`, color]));
+        return;
+      }
+      rows.push([`${category}-${entry.config.title}`, entry.config.color]);
+    });
     legend.hidden = rows.length === 0;
     legend.innerHTML = rows.map(([name, color]) => `
       <div class="legend-row">

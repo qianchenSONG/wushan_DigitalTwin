@@ -1,0 +1,3249 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.85860348,
+              31.08028795
+            ],
+            [
+              109.85868394,
+              31.08015931
+            ],
+            [
+              109.85881537,
+              31.08022363
+            ],
+            [
+              109.85869199,
+              31.08036606
+            ],
+            [
+              109.85860348,
+              31.08028795
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0001",
+        "name": "张村雨",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 235.2,
+        "points": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.85757619,
+              31.07938172
+            ],
+            [
+              109.85770628,
+              31.07944374
+            ],
+            [
+              109.8577559,
+              31.07938287
+            ],
+            [
+              109.85762313,
+              31.07931969
+            ],
+            [
+              109.85757619,
+              31.07938172
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0002",
+        "name": "西坪村4社曹先明",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 117.8,
+        "points": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.8588033,
+              31.08032241
+            ],
+            [
+              109.85863835,
+              31.08023512
+            ],
+            [
+              109.85873222,
+              31.08005594
+            ],
+            [
+              109.85889852,
+              31.08015242
+            ],
+            [
+              109.85886633,
+              31.08027072
+            ],
+            [
+              109.8588033,
+              31.08032241
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0003",
+        "name": "西坪村4社梁后典",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 429.8,
+        "points": 6
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.85896027,
+              31.08029701
+            ],
+            [
+              109.85915543,
+              31.0802647
+            ],
+            [
+              109.85914662,
+              31.08019836
+            ],
+            [
+              109.85894664,
+              31.08023602
+            ],
+            [
+              109.85896027,
+              31.08029701
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0004",
+        "name": "西坪村4社向存东",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 137.7,
+        "points": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.85763252,
+              31.07923355
+            ],
+            [
+              109.85778138,
+              31.07932544
+            ],
+            [
+              109.85784039,
+              31.07926686
+            ],
+            [
+              109.85770494,
+              31.07918071
+            ],
+            [
+              109.85763252,
+              31.07923355
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0005",
+        "name": "西坪村4社向勇",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 146.1,
+        "points": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.8580268,
+              31.07832615
+            ],
+            [
+              109.85831648,
+              31.07823427
+            ],
+            [
+              109.85826284,
+              31.07815386
+            ],
+            [
+              109.85796243,
+              31.07822278
+            ],
+            [
+              109.8580268,
+              31.07832615
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0006",
+        "name": "西坪村4社张村昌",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 338.1,
+        "points": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.85846472,
+              31.07762262
+            ],
+            [
+              109.85854154,
+              31.07758346
+            ],
+            [
+              109.85847879,
+              31.07749286
+            ],
+            [
+              109.85840227,
+              31.07753186
+            ],
+            [
+              109.85846472,
+              31.07762262
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0007",
+        "name": "西坪村4社张以金",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 99.8,
+        "points": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.85697135,
+              31.07767489
+            ],
+            [
+              109.8571001,
+              31.07767604
+            ],
+            [
+              109.85710412,
+              31.07751409
+            ],
+            [
+              109.85696867,
+              31.07751983
+            ],
+            [
+              109.85697135,
+              31.07767489
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0008",
+        "name": "西坪村4社向宗华",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 222.2,
+        "points": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.88331087,
+              31.09388396
+            ],
+            [
+              109.88339379,
+              31.09386781
+            ],
+            [
+              109.88335445,
+              31.09371275
+            ],
+            [
+              109.88328643,
+              31.09372217
+            ],
+            [
+              109.88331087,
+              31.09388396
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0009",
+        "name": "西坪村7社陈刚",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 131.2,
+        "points": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.88345873,
+              31.09465834
+            ],
+            [
+              109.88360774,
+              31.09470989
+            ],
+            [
+              109.88365263,
+              31.09463151
+            ],
+            [
+              109.88348901,
+              31.09459476
+            ],
+            [
+              109.88345873,
+              31.09465834
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0010",
+        "name": "西坪村7社何伟",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 135.3,
+        "points": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.88148272,
+              31.09407223
+            ],
+            [
+              109.88159269,
+              31.09400562
+            ],
+            [
+              109.88150015,
+              31.09393902
+            ],
+            [
+              109.88139852,
+              31.09398873
+            ],
+            [
+              109.88148272,
+              31.09407223
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0011",
+        "name": "西坪村7社杨永权",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 138.8,
+        "points": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.85824808,
+              31.07691795
+            ],
+            [
+              109.85836744,
+              31.07678242
+            ],
+            [
+              109.85817969,
+              31.07668708
+            ],
+            [
+              109.85805497,
+              31.07680424
+            ],
+            [
+              109.85824808,
+              31.07691795
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0012",
+        "name": "西坪村7社张存勇",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 390.8,
+        "points": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.85567451,
+              31.06689684
+            ],
+            [
+              109.85579252,
+              31.06686238
+            ],
+            [
+              109.85565305,
+              31.06652235
+            ],
+            [
+              109.85548139,
+              31.06664641
+            ],
+            [
+              109.85567451,
+              31.06689684
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0013",
+        "name": "张典英张典兴",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 593.8,
+        "points": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.85302778,
+              31.06469722
+            ],
+            [
+              109.8530969,
+              31.06476705
+            ],
+            [
+              109.85317469,
+              31.0647142
+            ],
+            [
+              109.85308751,
+              31.06464413
+            ],
+            [
+              109.85308751,
+              31.06464298
+            ],
+            [
+              109.85309556,
+              31.06463724
+            ],
+            [
+              109.85309288,
+              31.06464183
+            ],
+            [
+              109.85302778,
+              31.06469722
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0014",
+        "name": "王祖珍",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 94.1,
+        "points": 8
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.85341877,
+              31.06464298
+            ],
+            [
+              109.85349387,
+              31.06464987
+            ],
+            [
+              109.85352337,
+              31.06456716
+            ],
+            [
+              109.85344693,
+              31.06456371
+            ],
+            [
+              109.85341877,
+              31.06464298
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0015",
+        "name": "田发银",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 66.7,
+        "points": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.85300839,
+              31.06539772
+            ],
+            [
+              109.8531197,
+              31.06531845
+            ],
+            [
+              109.85301912,
+              31.0651829
+            ],
+            [
+              109.85291585,
+              31.06522196
+            ],
+            [
+              109.85291049,
+              31.06520817
+            ],
+            [
+              109.85291183,
+              31.06523689
+            ],
+            [
+              109.85294133,
+              31.06527825
+            ],
+            [
+              109.85293865,
+              31.06528629
+            ],
+            [
+              109.85293999,
+              31.06528629
+            ],
+            [
+              109.85292926,
+              31.06529088
+            ],
+            [
+              109.85294804,
+              31.06528974
+            ],
+            [
+              109.85294804,
+              31.06528859
+            ],
+            [
+              109.85294804,
+              31.06528744
+            ],
+            [
+              109.85300839,
+              31.06539772
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0016",
+        "name": "田发德",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 245.6,
+        "points": 14
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.85566914,
+              31.06714267
+            ],
+            [
+              109.85581532,
+              31.06708753
+            ],
+            [
+              109.85575497,
+              31.06695658
+            ],
+            [
+              109.85562086,
+              31.06700253
+            ],
+            [
+              109.85566914,
+              31.06714267
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0017",
+        "name": "田吉庆-2",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 230.8,
+        "points": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.85373929,
+              31.0650014
+            ],
+            [
+              109.85381171,
+              31.06492558
+            ],
+            [
+              109.85370174,
+              31.06487848
+            ],
+            [
+              109.85364273,
+              31.06494511
+            ],
+            [
+              109.85373929,
+              31.0650014
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0018",
+        "name": "田吉伟-2",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 114.1,
+        "points": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.85288769,
+              31.06522081
+            ],
+            [
+              109.85300705,
+              31.06513465
+            ],
+            [
+              109.85286623,
+              31.06501403
+            ],
+            [
+              109.85277504,
+              31.06506343
+            ],
+            [
+              109.85288769,
+              31.06522081
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0019",
+        "name": "田光美-1",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 246.5,
+        "points": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.85290781,
+              31.06491294
+            ],
+            [
+              109.85304996,
+              31.06487963
+            ],
+            [
+              109.85301107,
+              31.06475556
+            ],
+            [
+              109.85285833,
+              31.06481944
+            ],
+            [
+              109.85290781,
+              31.06491294
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0020",
+        "name": "田发元-2",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 193.1,
+        "points": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.85640407,
+              31.06786523
+            ],
+            [
+              109.85623106,
+              31.06767913
+            ],
+            [
+              109.85635445,
+              31.06762629
+            ],
+            [
+              109.85653281,
+              31.06779515
+            ],
+            [
+              109.85640407,
+              31.06786523
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0021",
+        "name": "田发友-2",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 352.1,
+        "points": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.85381976,
+              31.06479691
+            ],
+            [
+              109.85388815,
+              31.06463379
+            ],
+            [
+              109.85375404,
+              31.06460507
+            ],
+            [
+              109.85368431,
+              31.06475901
+            ],
+            [
+              109.85381976,
+              31.06479691
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0022",
+        "name": "田吉春-2",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 251.2,
+        "points": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.85331818,
+              31.06510019
+            ],
+            [
+              109.85337988,
+              31.06506687
+            ],
+            [
+              109.85327125,
+              31.06496693
+            ],
+            [
+              109.85323504,
+              31.06500714
+            ],
+            [
+              109.85331818,
+              31.06510019
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0023",
+        "name": "田雪梅-2",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 87.6,
+        "points": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.85314652,
+              31.06528055
+            ],
+            [
+              109.85327393,
+              31.06518979
+            ],
+            [
+              109.85313043,
+              31.06511283
+            ],
+            [
+              109.85305265,
+              31.06517486
+            ],
+            [
+              109.85314652,
+              31.06528055
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0024",
+        "name": "田光兵-6",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 195.7,
+        "points": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.86047566,
+              31.08015587
+            ],
+            [
+              109.8605749,
+              31.08016276
+            ],
+            [
+              109.86061513,
+              31.08006283
+            ],
+            [
+              109.86050382,
+              31.08005938
+            ],
+            [
+              109.86047566,
+              31.08015587
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0025",
+        "name": "陈鹏宇",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 111.6,
+        "points": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.85906616,
+              31.07661012
+            ],
+            [
+              109.85894948,
+              31.07651249
+            ],
+            [
+              109.85900581,
+              31.07646195
+            ],
+            [
+              109.85913053,
+              31.07656073
+            ],
+            [
+              109.85906616,
+              31.07661012
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0026",
+        "name": "黄云",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 126.9,
+        "points": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.85980511,
+              31.07854554
+            ],
+            [
+              109.85993519,
+              31.0784973
+            ],
+            [
+              109.85986814,
+              31.07840081
+            ],
+            [
+              109.85975549,
+              31.0784502
+            ],
+            [
+              109.85980511,
+              31.07854554
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0027",
+        "name": "张存海-2",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 153.8,
+        "points": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.89315704,
+              31.09589705
+            ],
+            [
+              109.89297196,
+              31.09612787
+            ],
+            [
+              109.89278153,
+              31.09602796
+            ],
+            [
+              109.89295051,
+              31.09579828
+            ],
+            [
+              109.89315704,
+              31.09589705
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0028",
+        "name": "宁鹤街130号",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 671.6,
+        "points": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.89157721,
+              31.09621745
+            ],
+            [
+              109.89188299,
+              31.09631851
+            ],
+            [
+              109.89199564,
+              31.09610031
+            ],
+            [
+              109.89169255,
+              31.09599581
+            ],
+            [
+              109.89157721,
+              31.09621745
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0029",
+        "name": "宁鹤街516号",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 834.8,
+        "points": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.89144042,
+              31.09473142
+            ],
+            [
+              109.89135727,
+              31.09473946
+            ],
+            [
+              109.89135861,
+              31.09486119
+            ],
+            [
+              109.89144579,
+              31.09486119
+            ],
+            [
+              109.89144042,
+              31.09473142
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0030",
+        "name": "聚鹤街384号",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 113.8,
+        "points": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.89146858,
+              31.09469237
+            ],
+            [
+              109.89164829,
+              31.09469008
+            ],
+            [
+              109.89165634,
+              31.09485545
+            ],
+            [
+              109.89148736,
+              31.09486004
+            ],
+            [
+              109.89146724,
+              31.09483937
+            ],
+            [
+              109.89145249,
+              31.09482559
+            ],
+            [
+              109.89146858,
+              31.09469237
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0031",
+        "name": "聚鹤街388号",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 336.0,
+        "points": 7
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.89107698,
+              31.09453045
+            ],
+            [
+              109.89107832,
+              31.09448451
+            ],
+            [
+              109.8912473,
+              31.09448107
+            ],
+            [
+              109.89124864,
+              31.09464184
+            ],
+            [
+              109.89108235,
+              31.09464644
+            ],
+            [
+              109.89107832,
+              31.09460395
+            ],
+            [
+              109.89107698,
+              31.09453045
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0032",
+        "name": "聚鹤街425号",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 290.5,
+        "points": 7
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.86839756,
+              31.07325148
+            ],
+            [
+              109.86875698,
+              31.07348351
+            ],
+            [
+              109.86884013,
+              31.07339047
+            ],
+            [
+              109.8684901,
+              31.0731435
+            ],
+            [
+              109.86844182,
+              31.07319979
+            ],
+            [
+              109.86839756,
+              31.07325148
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0033",
+        "name": "净坛一路528号",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 601.8,
+        "points": 6
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.86393437,
+              31.07362479
+            ],
+            [
+              109.86413553,
+              31.07368453
+            ],
+            [
+              109.86417174,
+              31.07359148
+            ],
+            [
+              109.86396253,
+              31.07352486
+            ],
+            [
+              109.86393437,
+              31.07362479
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0034",
+        "name": "望霞路308-320号",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 231.7,
+        "points": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.86371845,
+              31.073016
+            ],
+            [
+              109.86404836,
+              31.07309296
+            ],
+            [
+              109.8640725,
+              31.07300566
+            ],
+            [
+              109.8637493,
+              31.0729287
+            ],
+            [
+              109.86371845,
+              31.073016
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0035",
+        "name": "望霞路290-306号",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 325.0,
+        "points": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.86348912,
+              31.07296201
+            ],
+            [
+              109.86368224,
+              31.07301256
+            ],
+            [
+              109.86372516,
+              31.07292181
+            ],
+            [
+              109.86352265,
+              31.07287242
+            ],
+            [
+              109.86348912,
+              31.07296201
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0036",
+        "name": "望霞路278-288号",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 209.6,
+        "points": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.86318335,
+              31.07247268
+            ],
+            [
+              109.86321688,
+              31.07237045
+            ],
+            [
+              109.86363664,
+              31.07249336
+            ],
+            [
+              109.86359373,
+              31.07259789
+            ],
+            [
+              109.86318335,
+              31.07247268
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0037",
+        "name": "望霞路111号",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 505.8,
+        "points": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.86620218,
+              31.07342263
+            ],
+            [
+              109.86643553,
+              31.07329743
+            ],
+            [
+              109.86651063,
+              31.07339966
+            ],
+            [
+              109.86627996,
+              31.07352027
+            ],
+            [
+              109.86620218,
+              31.07342263
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0038",
+        "name": "望霞路91号",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 345.8,
+        "points": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.86494646,
+              31.07118675
+            ],
+            [
+              109.86481813,
+              31.07122238
+            ],
+            [
+              109.86486363,
+              31.07137706
+            ],
+            [
+              109.86470684,
+              31.07150319
+            ],
+            [
+              109.86459553,
+              31.07157441
+            ],
+            [
+              109.86475171,
+              31.07173796
+            ],
+            [
+              109.86475171,
+              31.07173796
+            ],
+            [
+              109.86499428,
+              31.07189305
+            ],
+            [
+              109.86518903,
+              31.07194725
+            ],
+            [
+              109.86537358,
+              31.0719606
+            ],
+            [
+              109.86559425,
+              31.07191781
+            ],
+            [
+              109.86611072,
+              31.07178303
+            ],
+            [
+              109.86630616,
+              31.07183645
+            ],
+            [
+              109.86633906,
+              31.07172337
+            ],
+            [
+              109.86605558,
+              31.07167269
+            ],
+            [
+              109.86589265,
+              31.07170974
+            ],
+            [
+              109.8657382,
+              31.07154154
+            ],
+            [
+              109.86567651,
+              31.07145761
+            ],
+            [
+              109.86552515,
+              31.07152347
+            ],
+            [
+              109.86533539,
+              31.07154953
+            ],
+            [
+              109.86515494,
+              31.07149289
+            ],
+            [
+              109.86501792,
+              31.07137367
+            ],
+            [
+              109.86494646,
+              31.07118675
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0039",
+        "name": "广东西路60号",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 5910.9,
+        "points": 23
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.86770958,
+              31.07157096
+            ],
+            [
+              109.86771226,
+              31.07139177
+            ],
+            [
+              109.86817628,
+              31.07140096
+            ],
+            [
+              109.86816153,
+              31.07157556
+            ],
+            [
+              109.86770958,
+              31.07157096
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0040",
+        "name": "广东西路17号",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 860.5,
+        "points": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.86446813,
+              31.070088
+            ],
+            [
+              109.86429915,
+              31.07006043
+            ],
+            [
+              109.86426428,
+              31.07019712
+            ],
+            [
+              109.86427367,
+              31.07027064
+            ],
+            [
+              109.8643367,
+              31.07041308
+            ],
+            [
+              109.86440644,
+              31.07047396
+            ],
+            [
+              109.86455664,
+              31.07056356
+            ],
+            [
+              109.86463577,
+              31.07058424
+            ],
+            [
+              109.86486778,
+              31.07058883
+            ],
+            [
+              109.8650448,
+              31.07053369
+            ],
+            [
+              109.86500457,
+              31.07043146
+            ],
+            [
+              109.86480877,
+              31.07047626
+            ],
+            [
+              109.86463308,
+              31.07045329
+            ],
+            [
+              109.8644802,
+              31.07037517
+            ],
+            [
+              109.86440644,
+              31.07024537
+            ],
+            [
+              109.86446813,
+              31.070088
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0041",
+        "name": "广东西路120号",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 1385.6,
+        "points": 16
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.88068476,
+              31.08588253
+            ],
+            [
+              109.88058016,
+              31.0860617
+            ],
+            [
+              109.88067403,
+              31.08608582
+            ],
+            [
+              109.88075987,
+              31.08591469
+            ],
+            [
+              109.88068476,
+              31.08588253
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0042",
+        "name": "文体广场6栋",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 185.5,
+        "points": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.8585324,
+              31.07405669
+            ],
+            [
+              109.85869333,
+              31.07391311
+            ],
+            [
+              109.85886633,
+              31.07404176
+            ],
+            [
+              109.85872284,
+              31.07420257
+            ],
+            [
+              109.8585324,
+              31.07405669
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0043",
+        "name": "巫峡路619号1栋",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 515.3,
+        "points": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.85769737,
+              31.07393063
+            ],
+            [
+              109.85772283,
+              31.07391566
+            ],
+            [
+              109.8577454,
+              31.07394411
+            ],
+            [
+              109.85778772,
+              31.07391923
+            ],
+            [
+              109.85762017,
+              31.07370109
+            ],
+            [
+              109.85754862,
+              31.07374315
+            ],
+            [
+              109.85769737,
+              31.07393063
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0044",
+        "name": "巫峡路621号1号楼",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 222.9,
+        "points": 7
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.85782832,
+              31.0731481
+            ],
+            [
+              109.85795572,
+              31.073101
+            ],
+            [
+              109.85803217,
+              31.07324918
+            ],
+            [
+              109.85787392,
+              31.07328824
+            ],
+            [
+              109.85782832,
+              31.0731481
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0045",
+        "name": "巫峡路621号26栋",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 246.4,
+        "points": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.8579812,
+              31.07309526
+            ],
+            [
+              109.85805497,
+              31.07308148
+            ],
+            [
+              109.85810325,
+              31.07320898
+            ],
+            [
+              109.8580429,
+              31.07322276
+            ],
+            [
+              109.8579812,
+              31.07309526
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0046",
+        "name": "巫峡路621号26栋下",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 98.8,
+        "points": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.87668693,
+              31.08291472
+            ],
+            [
+              109.87662926,
+              31.08275163
+            ],
+            [
+              109.87673655,
+              31.08272636
+            ],
+            [
+              109.87678349,
+              31.08289175
+            ],
+            [
+              109.87668693,
+              31.08291472
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0047",
+        "name": "净坛一路80号6单元（挡墙和地坪开裂）",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 191.1,
+        "points": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.87575889,
+              31.08406212
+            ],
+            [
+              109.87569988,
+              31.08387376
+            ],
+            [
+              109.87598285,
+              31.08379795
+            ],
+            [
+              109.87605259,
+              31.08398057
+            ],
+            [
+              109.87575889,
+              31.08406212
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0048",
+        "name": "巫峡路4号1幢(墙体开裂)",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 621.4,
+        "points": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.87604991,
+              31.08534273
+            ],
+            [
+              109.87613842,
+              31.08515322
+            ],
+            [
+              109.876353,
+              31.08523706
+            ],
+            [
+              109.87624303,
+              31.08540704
+            ],
+            [
+              109.87604991,
+              31.08534273
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0049",
+        "name": "净坛二路289号8幢(挡墙开裂)",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 466.9,
+        "points": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.87594128,
+              31.08555061
+            ],
+            [
+              109.87605393,
+              31.08537144
+            ],
+            [
+              109.87621486,
+              31.08545643
+            ],
+            [
+              109.87615049,
+              31.08561493
+            ],
+            [
+              109.87594128,
+              31.08555061
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0050",
+        "name": "净坛二路289号9幢（挡墙开裂）",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 401.7,
+        "points": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.87551078,
+              31.08247138
+            ],
+            [
+              109.87541288,
+              31.08207972
+            ],
+            [
+              109.87550542,
+              31.08205445
+            ],
+            [
+              109.87559259,
+              31.08244382
+            ],
+            [
+              109.87551078,
+              31.08247138
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0051",
+        "name": "巫峡路32号附1号2幢一单元、二单元、三单元(墙体开裂)",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 387.2,
+        "points": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.87291843,
+              31.08156861
+            ],
+            [
+              109.87261266,
+              31.08131133
+            ],
+            [
+              109.87307802,
+              31.08090933
+            ],
+            [
+              109.8733912,
+              31.08117694
+            ],
+            [
+              109.87291843,
+              31.08156861
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0052",
+        "name": "巫峡路48号2幢(混凝土缺损、钢筋锈蚀)",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 2609.9,
+        "points": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.87588629,
+              31.08191663
+            ],
+            [
+              109.87581119,
+              31.08163638
+            ],
+            [
+              109.87596139,
+              31.08160307
+            ],
+            [
+              109.87603918,
+              31.08188562
+            ],
+            [
+              109.87588629,
+              31.08191663
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0053",
+        "name": "净坛二路450号2幢一单元、二单元、三单元（地坪开裂、变形）",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 478.7,
+        "points": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.87467527,
+              31.0859411
+            ],
+            [
+              109.87482011,
+              31.08582396
+            ],
+            [
+              109.8749274,
+              31.08592502
+            ],
+            [
+              109.87480938,
+              31.08604677
+            ],
+            [
+              109.87467527,
+              31.0859411
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0054",
+        "name": "净坛二路222~228号(连接构造)",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 297.2,
+        "points": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.87661451,
+              31.08453991
+            ],
+            [
+              109.87643749,
+              31.08439979
+            ],
+            [
+              109.87662256,
+              31.08422291
+            ],
+            [
+              109.8767969,
+              31.08433891
+            ],
+            [
+              109.87661451,
+              31.08453991
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0055",
+        "name": "净坛二路277~285号1栋（柱梁节点连接不当、挡墙开裂）",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 602.0,
+        "points": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.87525061,
+              31.08491318
+            ],
+            [
+              109.87516209,
+              31.08480751
+            ],
+            [
+              109.87531766,
+              31.08469955
+            ],
+            [
+              109.87543032,
+              31.08481785
+            ],
+            [
+              109.87525061,
+              31.08491318
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0056",
+        "name": "净坛二路252号1幢~258号1幢(地坪开裂、变形等)",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 307.7,
+        "points": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.87560734,
+              31.0847053
+            ],
+            [
+              109.87548396,
+              31.08458125
+            ],
+            [
+              109.8755832,
+              31.08451694
+            ],
+            [
+              109.87569049,
+              31.08463868
+            ],
+            [
+              109.87568781,
+              31.08464442
+            ],
+            [
+              109.87560734,
+              31.0847053
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0057",
+        "name": "净坛二路284号1幢(墙体开裂)",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 200.7,
+        "points": 6
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.87794355,
+              31.08372215
+            ],
+            [
+              109.87791136,
+              31.08363256
+            ],
+            [
+              109.87802535,
+              31.08359466
+            ],
+            [
+              109.87805486,
+              31.08368769
+            ],
+            [
+              109.87794355,
+              31.08372215
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0058",
+        "name": "净坛二路18号（墙体开裂）",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 121.0,
+        "points": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.88530621,
+              31.08999986
+            ],
+            [
+              109.88518015,
+              31.08995852
+            ],
+            [
+              109.88525927,
+              31.08973227
+            ],
+            [
+              109.88531291,
+              31.08974835
+            ],
+            [
+              109.88532633,
+              31.08972423
+            ],
+            [
+              109.88540277,
+              31.08974261
+            ],
+            [
+              109.88530621,
+              31.08999986
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0059",
+        "name": "翠屏街200号3幢一单元、二单元(墙体开裂，基础)",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 371.7,
+        "points": 7
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.88518551,
+              31.08978166
+            ],
+            [
+              109.88466382,
+              31.08967485
+            ],
+            [
+              109.88470271,
+              31.08956919
+            ],
+            [
+              109.88522574,
+              31.08965188
+            ],
+            [
+              109.88518551,
+              31.08978166
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0060",
+        "name": "翠屏街200号2幢一单元、二单元、三单元(墙体开裂，基础)",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 692.3,
+        "points": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.88509163,
+              31.08995048
+            ],
+            [
+              109.88485,
+              31.0899
+            ],
+            [
+              109.88489583,
+              31.08977477
+            ],
+            [
+              109.88513857,
+              31.0898207
+            ],
+            [
+              109.88509163,
+              31.08995048
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0061",
+        "name": "翠屏街200号1幢一单元、二单元(墙体开裂)",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 351.4,
+        "points": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.88339352,
+              31.08945909
+            ],
+            [
+              109.88334159,
+              31.08958625
+            ],
+            [
+              109.88304301,
+              31.0894955
+            ],
+            [
+              109.88296437,
+              31.08943666
+            ],
+            [
+              109.88300075,
+              31.08933439
+            ],
+            [
+              109.88339352,
+              31.08945909
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0062",
+        "name": "翠屏街181号1幢一单元、二单元（基础）",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 588.3,
+        "points": 6
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.88406703,
+              31.09007451
+            ],
+            [
+              109.88400802,
+              31.09013079
+            ],
+            [
+              109.88406435,
+              31.09017443
+            ],
+            [
+              109.88415554,
+              31.09018821
+            ],
+            [
+              109.88420114,
+              31.09015261
+            ],
+            [
+              109.88414079,
+              31.09010208
+            ],
+            [
+              109.88411799,
+              31.09008141
+            ],
+            [
+              109.88424137,
+              31.08997804
+            ],
+            [
+              109.88409787,
+              31.09009978
+            ],
+            [
+              109.88406703,
+              31.09007451
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0063",
+        "name": "翠屏街235号1幢四单元",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 132.3,
+        "points": 10
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.87522379,
+              31.07361561
+            ],
+            [
+              109.87538069,
+              31.07375
+            ],
+            [
+              109.87552151,
+              31.0736225
+            ],
+            [
+              109.87536192,
+              31.07348466
+            ],
+            [
+              109.87522379,
+              31.07361561
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0064",
+        "name": "平湖西路612（墙体开裂)",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 418.5,
+        "points": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.87503201,
+              31.07335026
+            ],
+            [
+              109.87520501,
+              31.07347662
+            ],
+            [
+              109.87528681,
+              31.07338588
+            ],
+            [
+              109.87512723,
+              31.07324803
+            ],
+            [
+              109.87503201,
+              31.07335026
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0065",
+        "name": "平湖西路606号",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 294.4,
+        "points": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.87527609,
+              31.07321242
+            ],
+            [
+              109.87541556,
+              31.07309756
+            ],
+            [
+              109.87559527,
+              31.07324918
+            ],
+            [
+              109.87547189,
+              31.07335945
+            ],
+            [
+              109.87527609,
+              31.07321242
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0066",
+        "name": "平湖西路608号（墙体开裂）",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 432.6,
+        "points": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.87551212,
+              31.07336979
+            ],
+            [
+              109.875606,
+              31.07326526
+            ],
+            [
+              109.87582192,
+              31.0734077
+            ],
+            [
+              109.87569988,
+              31.07351452
+            ],
+            [
+              109.87551212,
+              31.07336979
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0067",
+        "name": "平湖西路610号（墙体开裂）",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 390.9,
+        "points": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.87307668,
+              31.07415203
+            ],
+            [
+              109.87317994,
+              31.07422439
+            ],
+            [
+              109.87326577,
+              31.0741371
+            ],
+            [
+              109.87315044,
+              31.07407162
+            ],
+            [
+              109.87307668,
+              31.07415203
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0068",
+        "name": "高唐街33号1单元(墙体开裂)",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 155.6,
+        "points": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.87312362,
+              31.07334912
+            ],
+            [
+              109.87326175,
+              31.07318715
+            ],
+            [
+              109.87320408,
+              31.07314695
+            ],
+            [
+              109.87306863,
+              31.0733181
+            ],
+            [
+              109.87312362,
+              31.07334912
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0069",
+        "name": "高唐街48号 -3场地",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 151.3,
+        "points": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.8764509,
+              31.07695011
+            ],
+            [
+              109.87635836,
+              31.07685937
+            ],
+            [
+              109.87646163,
+              31.07678586
+            ],
+            [
+              109.87656221,
+              31.07688005
+            ],
+            [
+              109.8764509,
+              31.07695011
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0070",
+        "name": "广东中路211号A栋（基础沉降）",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 178.9,
+        "points": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.88205269,
+              31.0830893
+            ],
+            [
+              109.8819387,
+              31.08298708
+            ],
+            [
+              109.88206074,
+              31.08283892
+            ],
+            [
+              109.88223106,
+              31.08293195
+            ],
+            [
+              109.88205269,
+              31.0830893
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0071",
+        "name": "平湖西路85号(墙体开裂)",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 386.1,
+        "points": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.87861946,
+              31.07925078
+            ],
+            [
+              109.87853229,
+              31.0789441
+            ],
+            [
+              109.87859532,
+              31.07892228
+            ],
+            [
+              109.87867981,
+              31.07888782
+            ],
+            [
+              109.8787643,
+              31.07921287
+            ],
+            [
+              109.87869456,
+              31.07923585
+            ],
+            [
+              109.87861946,
+              31.07925078
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0072",
+        "name": "平湖西路312-1幢（墙体开裂）",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 534.8,
+        "points": 7
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.87817019,
+              31.07750834
+            ],
+            [
+              109.87811387,
+              31.07738314
+            ],
+            [
+              109.87831235,
+              31.07733835
+            ],
+            [
+              109.87835278,
+              31.07744167
+            ],
+            [
+              109.87817019,
+              31.07750834
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0073",
+        "name": "平湖西路251-1幢(墙体开裂)",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 259.7,
+        "points": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.87283796,
+              31.0784146
+            ],
+            [
+              109.87289965,
+              31.07835027
+            ],
+            [
+              109.87325504,
+              31.07855702
+            ],
+            [
+              109.87315848,
+              31.07868682
+            ],
+            [
+              109.87280712,
+              31.07845709
+            ],
+            [
+              109.87283796,
+              31.0784146
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0074",
+        "name": "净坛一路349号9幢 1单元、2单元（地面沉降、挡墙开裂）",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 666.1,
+        "points": 6
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.87073243,
+              31.07630688
+            ],
+            [
+              109.87079412,
+              31.07618972
+            ],
+            [
+              109.87095773,
+              31.07624601
+            ],
+            [
+              109.87089336,
+              31.07636891
+            ],
+            [
+              109.87073243,
+              31.07630688
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "relocation-safety-severe-houses-A0075",
+        "name": "祥云路324号（墙体开裂）",
+        "source": "迁建区安全隐患分级.ovkml",
+        "kind": "building-safety-risk",
+        "folder": "存在有严重安全隐患的房子",
+        "risk_level": "严重安全隐患",
+        "area_m2": 246.3,
+        "points": 5
+      }
+    }
+  ]
+}

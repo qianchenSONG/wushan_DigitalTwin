@@ -13,7 +13,7 @@
       <header class="brand-block">
         <div class="eyebrow">Wushan Digital Twin</div>
         <h1>巫山城市安全调研数字孪生系统</h1>
-        <p>以供水管线为主图层，叠加排水管线与缺陷分布。</p>
+        <p>汇集城市安全调研数据，按专题板块进行空间叠加查看。</p>
       </header>
 
       <nav class="module-tabs" aria-label="模块导航">
@@ -24,16 +24,8 @@
       <section class="tab-panel active" data-panel="overview">
         <div class="metric-grid">
           <article class="metric-card">
-            <span>供水管线</span>
-            <strong id="metricPipeLength">--</strong>
-          </article>
-          <article class="metric-card">
-            <span>供水线段</span>
-            <strong id="metricPipeSegments">--</strong>
-          </article>
-          <article class="metric-card">
-            <span>供水节点</span>
-            <strong id="metricPipeNodes">--</strong>
+            <span>图层板块</span>
+            <strong id="metricSectionCount">--</strong>
           </article>
           <article class="metric-card">
             <span>可叠加图层</span>
@@ -42,7 +34,7 @@
         </div>
         <div class="info-box">
           <h2>数据状态</h2>
-          <p>供水主图层已使用奥维导出的标准 GeoJSON 真实线几何；排水管线图和排水管线缺陷分布已拆分为独立专题图层。</p>
+          <p>图层已按地质、防护工程、房屋建筑、管网、消防五类板块整理，可按需打开查看。</p>
         </div>
       </section>
 
@@ -51,24 +43,6 @@
           <h2>图层管理</h2>
           <button class="small-button" id="clearTopicLayers">关闭专题</button>
         </div>
-
-        <article class="topic-card layer-card">
-          <label class="topic-main">
-            <input type="checkbox" id="toggleWater" checked>
-            <span>
-              <h3>供水管线图</h3>
-              <div class="topic-meta">标准 GeoJSON 主图层 · <span id="waterLayerMeta">--</span></div>
-            </span>
-          </label>
-          <div class="topic-tools">
-            <button id="fitPipes">定位</button>
-            <label class="inline-check"><input type="checkbox" id="toggleWaterNodes"> 管点/节点</label>
-          </div>
-          <details class="layer-details">
-            <summary>数据概况</summary>
-            <dl id="waterLayerDetails"></dl>
-          </details>
-        </article>
 
         <div class="topic-layer-list" id="topicLayerList"></div>
       </section>
@@ -93,9 +67,9 @@
   </div>
 
   <script src="./vendor/leaflet/leaflet.js"></script>
-  <script src="./data/pipes.js"></script>
-  <script src="./data/summary.js"></script>
-  <script src="./data/layers/catalog.js"></script>
-  <script type="module" src="./src/main.js"></script>
+  <script src="./data/pipes.js?v=ovkml-20260721-building-original-c"></script>
+  <script src="./data/summary.js?v=ovkml-20260721-building-original-c"></script>
+  <script src="./data/layers/catalog.js?v=ovkml-20260721-building-original-c"></script>
+  <script type="module" src="./src/main.js?v=ovkml-20260721-building-original-c"></script>
 </body>
 </html>

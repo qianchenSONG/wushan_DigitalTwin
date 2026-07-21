@@ -1,175 +1,383 @@
 [
   {
-    "file": "巫山缺陷分布图.geojson",
+    "id": "drainage-defects-geojson-lines",
+    "title": "排水管线图",
+    "file": "巫山缺陷分布图.ovkml",
     "kind": "drainage-defect-line",
+    "category": "管网",
     "color": "#ff6b6b",
-    "fileSizeMb": 107.2,
-    "recordCount": 60674,
+    "enabled": false,
+    "description": "来自 OVKML 文件夹筛选，仅保留 YS_LINE、WS_LINE、QTPS_LINE 相关内容。",
+    "fileSizeMb": 69.88,
+    "recordCount": 35109,
+    "pointCount": 0,
+    "lineCount": 35109,
+    "lengthKm": 180.0,
     "bounds": [
       [
         31.06138348,
-        109.85163648
+        109.85163911
       ],
       [
-        31.1031865,
-        109.89401252
+        31.10316063,
+        109.89400728
       ]
     ],
     "topNames": [
       [
-        "0_11847",
-        3229
+        "WS_LINE",
+        17892
       ],
       [
-        "0_11803",
-        3149
+        "YS_LINE",
+        17199
       ],
       [
-        "0_11848",
-        2590
-      ],
-      [
-        "0_5757",
-        1863
-      ],
-      [
-        "0_5759",
-        1694
-      ],
-      [
-        "0_11808",
-        1139
-      ],
-      [
-        "0_5765",
-        996
-      ],
-      [
-        "0_11807",
-        690
-      ],
-      [
-        "0_11811",
-        595
-      ],
-      [
-        "污水 砼 Φ400",
-        554
-      ],
-      [
-        "0_5770",
-        420
-      ],
-      [
-        "雨水 砼 Φ300",
-        310
+        "QTPS_LINE",
+        18
       ]
     ],
-    "pointsUrl": "data/layers/drainage-defects-geojson.points.geojson",
-    "linesUrl": "data/layers/drainage-defects-geojson.lines.geojson",
-    "id": "drainage-defects-geojson-lines",
-    "title": "排水管线图",
-    "enabled": false,
-    "description": "排水管线线对象，已隐藏一级/二级/三级/四级结构性与功能性缺陷线。",
     "pointsDataId": "drainage-defects-geojson",
     "linesDataId": "drainage-defects-geojson",
     "hasPoints": false,
     "hasLines": true,
-    "pointCount": 0,
-    "lineCount": 82615,
-    "lengthKm": 239.09,
-    "filteredRules": [
-      "隐藏线对象：一级/二级/三级/四级结构性缺陷、功能性缺陷"
-    ],
-    "filteredCounts": {
-      "一级功能性缺陷": 3944,
-      "一级结构性缺陷": 13813,
-      "三级功能性缺陷": 146,
-      "三级结构性缺陷": 844,
-      "二级功能性缺陷": 573,
-      "二级结构性缺陷": 5346,
-      "四级功能性缺陷": 105,
-      "四级结构性缺陷": 221
-    }
+    "pointsUrl": "data/layers/drainage-defects-geojson.points.geojson",
+    "linesUrl": "data/layers/drainage-defects-geojson.lines.geojson",
+    "sourceFolders": [
+      "QTPS_LINE",
+      "WS_LINE",
+      "YS_LINE"
+    ]
   },
   {
-    "file": "巫山缺陷分布图.geojson",
+    "id": "drainage-defects-geojson-points",
+    "title": "排水管线缺陷分布",
+    "file": "巫山缺陷分布图.ovkml",
     "kind": "drainage-defect-point",
-    "color": "#ff9f43",
-    "fileSizeMb": 107.2,
-    "recordCount": 60674,
+    "category": "管网",
+    "color": "#ef6f4d",
+    "enabled": false,
+    "description": "来自 OVKML 1-4 级结构性/功能性缺陷文件夹；颜色随缺陷等级加深。",
+    "fileSizeMb": 69.88,
+    "recordCount": 24992,
+    "pointCount": 24992,
+    "lineCount": 0,
+    "lengthKm": 0,
     "bounds": [
       [
-        31.06138992,
-        109.85164644
+        31.06325862,
+        109.85340173
       ],
       [
-        31.10316707,
-        109.89401461
+        31.10316223,
+        109.89338391
       ]
     ],
     "topNames": [
       [
-        "0_11847",
-        3229
+        "一级结构性缺陷",
+        13813
       ],
       [
-        "0_11803",
-        3149
+        "二级结构性缺陷",
+        5346
       ],
       [
-        "0_11848",
-        2590
+        "一级功能性缺陷",
+        3944
       ],
       [
-        "0_5757",
-        1863
+        "三级结构性缺陷",
+        844
       ],
       [
-        "0_5759",
-        1694
+        "二级功能性缺陷",
+        573
       ],
       [
-        "0_11808",
-        1139
+        "四级结构性缺陷",
+        221
       ],
       [
-        "0_5765",
-        996
+        "三级功能性缺陷",
+        146
       ],
       [
-        "0_11807",
-        690
-      ],
-      [
-        "0_11811",
-        595
-      ],
-      [
-        "污水 砼 Φ400",
-        554
-      ],
-      [
-        "0_5770",
-        420
-      ],
-      [
-        "雨水 砼 Φ300",
-        310
+        "四级功能性缺陷",
+        105
       ]
     ],
-    "pointsUrl": "data/layers/drainage-defects-geojson.points.geojson",
-    "linesUrl": "data/layers/drainage-defects-geojson.lines.geojson",
-    "id": "drainage-defects-geojson-points",
-    "title": "排水管线缺陷分布",
-    "enabled": false,
-    "description": "排水管线缺陷点对象，和排水管线图拆分为独立开关。",
     "pointsDataId": "drainage-defects-geojson",
     "linesDataId": "drainage-defects-geojson",
     "hasPoints": true,
     "hasLines": false,
-    "pointCount": 42013,
+    "pointsUrl": "data/layers/drainage-defects-geojson.points.geojson",
+    "linesUrl": "data/layers/drainage-defects-geojson.lines.geojson",
+    "severityColors": {
+      "1": "#ffd166",
+      "2": "#f4a261",
+      "3": "#ef6f4d",
+      "4": "#d62828"
+    },
+    "sourceFolders": [
+      "一级功能性缺陷",
+      "一级结构性缺陷",
+      "二级功能性缺陷",
+      "二级结构性缺陷",
+      "三级功能性缺陷",
+      "三级结构性缺陷",
+      "四级功能性缺陷",
+      "四级结构性缺陷"
+    ]
+  },
+  {
+    "id": "community-fire-risk",
+    "title": "各社区消防安全风险分布",
+    "file": "各社区消防安全风险分布.ovkml",
+    "kind": "fire-risk",
+    "category": "消防",
+    "geometryType": "mixed",
+    "patternFill": "diagonal",
+    "color": "#ff0000",
+    "enabled": false,
+    "description": "保留风险块，已排除图钉标记和含义不确定的线；块颜色表示风险等级。",
+    "fileSizeMb": 0.09,
+    "recordCount": 74,
+    "pointCount": 0,
     "lineCount": 0,
-    "lengthKm": 0
+    "polygonCount": 74,
+    "lengthKm": 0,
+    "bounds": [
+      [
+        31.06436268,
+        109.85483497
+      ],
+      [
+        31.09624271,
+        109.89343196
+      ]
+    ],
+    "topNames": [
+      [
+        "高唐街道上升社区",
+        15
+      ],
+      [
+        "高唐街道净坛社区",
+        13
+      ],
+      [
+        "高唐街道圣泉社区",
+        13
+      ],
+      [
+        "高唐街道登龙社区",
+        9
+      ],
+      [
+        "龙门街道聚鹤社区",
+        7
+      ],
+      [
+        "高唐街道松峦社区",
+        7
+      ],
+      [
+        "高唐街道起云社区",
+        5
+      ],
+      [
+        "高唐街道翠屏社区",
+        2
+      ],
+      [
+        "高唐街道宁江社区",
+        1
+      ],
+      [
+        "高唐街道朝云社区",
+        1
+      ],
+      [
+        "巫峡镇西坪村",
+        1
+      ]
+    ],
+    "hasPoints": false,
+    "hasLines": true,
+    "pointsUrl": "data/layers/community-fire-risk.points.geojson",
+    "linesUrl": "data/layers/community-fire-risk.lines.geojson",
+    "riskColors": {
+      "高风险": "#ff0000",
+      "中风险": "#d89b12"
+    },
+    "filteredOut": {
+      "图钉": 78,
+      "线": 2
+    }
+  },
+  {
+    "id": "relocation-safety-moderate-houses",
+    "title": "存在一定安全隐患的房子",
+    "file": "迁建区安全隐患分级.ovkml",
+    "kind": "building-safety-risk",
+    "geometryType": "polygon",
+    "category": "房屋建筑",
+    "color": "#d89b12",
+    "enabled": false,
+    "description": "来自迁建区安全隐患分级 ovkml，按原文件夹分类。",
+    "fileSizeMb": 0.08,
+    "recordCount": 64,
+    "polygonCount": 64,
+    "pointCount": 0,
+    "lineCount": 0,
+    "lengthKm": 0,
+    "bounds": [
+      [
+        31.06424321,
+        109.85341474
+      ],
+      [
+        31.0963818,
+        109.89238188
+      ]
+    ],
+    "topNames": [
+      [
+        "张后道-2",
+        1
+      ],
+      [
+        "张典玉",
+        1
+      ],
+      [
+        "张存兴-4",
+        1
+      ],
+      [
+        "向宗惠-2",
+        1
+      ],
+      [
+        "向厚众",
+        1
+      ],
+      [
+        "向存燕-2",
+        1
+      ],
+      [
+        "西坪村7社邹启亮",
+        1
+      ],
+      [
+        "西坪村7社张玲",
+        1
+      ],
+      [
+        "西坪村7社龚清胜",
+        1
+      ],
+      [
+        "西坪村7社冯光龙",
+        1
+      ],
+      [
+        "西坪村7社陈胜鑫",
+        1
+      ],
+      [
+        "西坪村4社张后礼",
+        1
+      ]
+    ],
+    "hasPoints": false,
+    "hasLines": true,
+    "pointsUrl": "data/layers/relocation-safety-moderate-houses.points.geojson",
+    "linesUrl": "data/layers/relocation-safety-moderate-houses.lines.geojson",
+    "featureUnit": "栋房屋"
+  },
+  {
+    "id": "relocation-safety-severe-houses",
+    "title": "存在严重安全隐患的房子",
+    "file": "迁建区安全隐患分级.ovkml",
+    "kind": "building-safety-risk",
+    "geometryType": "polygon",
+    "category": "房屋建筑",
+    "color": "#eb5757",
+    "enabled": false,
+    "description": "来自迁建区安全隐患分级 ovkml，按原文件夹分类。",
+    "fileSizeMb": 0.08,
+    "recordCount": 75,
+    "polygonCount": 75,
+    "pointCount": 0,
+    "lineCount": 0,
+    "lengthKm": 0,
+    "bounds": [
+      [
+        31.06456371,
+        109.85277504
+      ],
+      [
+        31.09631851,
+        109.89315704
+      ]
+    ],
+    "topNames": [
+      [
+        "张村雨",
+        1
+      ],
+      [
+        "西坪村4社曹先明",
+        1
+      ],
+      [
+        "西坪村4社梁后典",
+        1
+      ],
+      [
+        "西坪村4社向存东",
+        1
+      ],
+      [
+        "西坪村4社向勇",
+        1
+      ],
+      [
+        "西坪村4社张村昌",
+        1
+      ],
+      [
+        "西坪村4社张以金",
+        1
+      ],
+      [
+        "西坪村4社向宗华",
+        1
+      ],
+      [
+        "西坪村7社陈刚",
+        1
+      ],
+      [
+        "西坪村7社何伟",
+        1
+      ],
+      [
+        "西坪村7社杨永权",
+        1
+      ],
+      [
+        "西坪村7社张存勇",
+        1
+      ]
+    ],
+    "hasPoints": false,
+    "hasLines": true,
+    "pointsUrl": "data/layers/relocation-safety-severe-houses.points.geojson",
+    "linesUrl": "data/layers/relocation-safety-severe-houses.lines.geojson",
+    "featureUnit": "栋房屋"
   }
 ]

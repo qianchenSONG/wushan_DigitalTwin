@@ -1,29 +1,30 @@
 {
-  "source": "D:\\Desktop\\巫山\\可视化\\原始数据\\供水管线图（2025年测）.geojson",
-  "coordinate_system": "GeoJSON声明为EPSG:4490；按经纬度直接叠加，和WGS84底图在本项目精度范围内匹配。",
+  "source": "/Users/wutang/Developer/wushan_DigitalTwin/原始数据/供水管线图（2025年测）.ovkml",
+  "source_folder": "JSL",
+  "coordinate_system": "OVKML 标注为 CGCS2000；按经纬度直接叠加。",
   "bounds": [
     [
-      31.06275674,
-      109.82819011
+      31.06277065,
+      109.82819802
     ],
     [
-      31.11123081,
-      109.89511595
+      31.1112197,
+      109.89510544
     ]
   ],
-  "record_count": 20498,
-  "pipe_segment_count": 20257,
-  "node_count": 12544,
-  "total_length_m": 135220.6,
-  "total_length_km": 135.22,
+  "record_count": 37,
+  "pipe_segment_count": 7911,
+  "node_count": 0,
+  "total_length_m": 115707.2,
+  "total_length_km": 115.71,
   "material_counts": {
-    "未识别": 20257
+    "JSL": 7911
   },
   "diameter_counts": {
-    "未识别": 20257
+    "未识别": 7911
   },
   "material_lengths_km": {
-    "未识别": 135.22
+    "JSL": 115.71
   },
   "research_context": {
     "area_km2": 6.8,
